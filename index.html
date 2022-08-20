@@ -8,6 +8,105 @@
     <title>TailwindCss</title>
   </head>
   <body>
-    <h1 class="text-3xl text-green-500 uppercase font-bold">Ola =)</h1>
+    <div class="m-auto p-4 max-w-screen-xl text-center">
+      <h1 class="text-5xl text-lime-800">Spacing</h1>
+      <h2 class="text-3xl mt-8 font-bold">Padding</h2>
+      <div class="mt-10">
+      <h3> Add padding to a single side</h3>
+      <div class="flex flex-row gap-4 flex-wrap justify-center">
+        <div class="pt-6 bg-cyan-500 w-1/5 rounded-md text-cyan-50">pt-6</div>
+        <div class="pr-4 bg-cyan-500 w-16 rounded-md text-cyan-50">pr-4</div>
+        <div class="pb-8 bg-cyan-500 w-16 rounded-md text-cyan-50">pb-8</div>
+        <div class="pl-2 bg-cyan-500 w-16 rounded-md text-cyan-50">pl-2</div>
+      </div>
+    </div>
+      <div class="mt-10">
+      <h3>Add horizontal padding</h3>
+       <div class="flex flex-row gap-4 flex-wrap justify-center">
+         <!-- Breakpoints and media queries md:px-12 -->
+        <div class="px-8 md:px-12 bg-cyan-500 w-28 rounded-md text-cyan-50">px-8</div>
+       </div>
+      </div>
+       <div class="mt-10">
+          <h3>Add vertical padding</h3>
+           <div class="flex flex-row  justify-center">
+           
+             <div class="py-8 hover:py-10 cursor-pointer bg-cyan-500 w-28 rounded-lg text-cyan-50">py-8</div>
+          </div>
+      </div>
+       
+       <div class="mt-10">
+        <h3>Add padding to all sides</h3>
+       <div class="flex flex-row gap-4 flex-wrap justify-center">
+        <div class="p-8 bg-cyan-500 w-28 rounded-lg text-cyan-50">p-8</div>
+       </div>
+       </div>
+       
+      
+      
+      <div class="mt-10  border	border-emerald-800 border-dashed rounded-sm">
+        <h2 class="text-3xl mt-8 font-bold">Margin</h2>
+        <h3>Add margin to a single side</h3>
+        <div class="flex flex-wrap justify-around mt-2">
+          <div class="mt-6 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">mt-6</div>
+          <div class="mr-4 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">mr-4</div>
+          <div class="mb-8 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">mb-8</div>
+          <div class="ml-2 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">ml-2</div>
+        </div>
+      </div>
+    <div class="flex gap-12 flex-wrap sm:gap-4 mt-10 border	border-emerald-800 border-dashed rounded-sm">
+      <div class="mt-10"><h3>Add horizontal margin</h3>
+        <div class="mx-8 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">mx-8</div>
+      </div>
+      <div class="mt-10">
+        <h3>Add vertical margin</h3>
+        <div class="my-8 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">my-8</div>
+      </div>
+      <div class="mt-10">
+        <h3>Add margin to all sides</h3>
+        <div class="m-8 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">m-8</div>
+      </div>
+      <div class="mt-10">
+        <h3>Using negative values</h3>
+        <div class="w-auto h-16 bg-sky-400 opacity-20 ..."></div>
+        <div class="-mt-8 bg-sky-300 ...">-mt-8</div>
+      </div>
+    </div>
+
+      <h2 class="text-3xl mt-8 font-bold">Space Between</h2>
+      <p>Utilities for controlling the space between child elements.</p>
+      <div class="mt-4">
+          <h3>Add horizontal space between children</h3>
+          <div class="flex space-x-4 bg-orange-100 text-cyan-50">
+            <div class="bg-slate-500 px-1">01</div>
+            <div class="bg-slate-500 px-1">02</div>
+            <div class="bg-slate-500 px-1">03</div>
+          </div>
+        <div class="mt-6">
+          <h3>Add vertical space between children</h3>
+          <div class="flex flex-col space-y-4 hover:space-y-8 bg-orange-100 text-cyan-50">
+            <div class="bg-slate-500 p-2">01</div>
+            <div class="bg-slate-500 p-2">02</div>
+            <div class="bg-slate-500 p-2">03</div>
+          </div>
+        </div>
+        <div class="mt-4">
+          <h3>Reversing children order</h3>
+          <div class="flex flex-row-reverse space-x-4 space-x-reverse bg-orange-100 text-cyan-50">
+            <div class="bg-slate-500 p-4 rounded-sm">01</div>
+            <div class="bg-slate-500 p-4 rounded-sm">02</div>
+            <div class="bg-slate-500 p-4 rounded-sm">03</div>
+          </div>
+        </div>
+        <div>
+          <h3>Using negative values</h3>
+          <div class="flex -space-x-4 bg-orange-100 text-cyan-50">
+            <div class="bg-slate-500 p-4 rounded-sm">01</div>
+            <div class="bg-slate-500 p-4 rounded-sm">02</div>
+            <div class="bg-slate-500 p-4 rounded-sm">03</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
