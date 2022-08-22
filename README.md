@@ -13,6 +13,7 @@ $ git checkout lesson-2, etc
 $ Install dependencies: yarn install
 $ Run the CSS build file: yarn build
 $ Run Live Server or index.html in your browser
+$ Install extention: Tailwind CSS IntelliSense
 ```
 
 ### Lessons
