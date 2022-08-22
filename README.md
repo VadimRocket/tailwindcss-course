@@ -22,7 +22,7 @@ $ Run Live Server or index.html in your browser
 - [] lesson-4: Layout
 - [] lesson-5: Flexbox & Grid
 - [x] lesson-6: Spacing
-- [] lesson-7: Sizing
+- [x] lesson-7: Sizing
 - [] lesson-8: Typography
 - [] lesson-9: Backgrounds
 - [] lesson-0: Borders
