@@ -8,105 +8,130 @@
     <title>TailwindCss</title>
   </head>
   <body>
-    <div class="m-auto p-4 max-w-screen-xl text-center">
-      <h1 class="text-5xl text-lime-800">Spacing</h1>
-      <h2 class="text-3xl mt-8 font-bold">Padding</h2>
-      <div class="mt-10">
-      <h3> Add padding to a single side</h3>
-      <div class="flex flex-row gap-4 flex-wrap justify-center">
-        <div class="pt-6 bg-cyan-500 w-1/5 rounded-md text-cyan-50">pt-6</div>
-        <div class="pr-4 bg-cyan-500 w-16 rounded-md text-cyan-50">pr-4</div>
-        <div class="pb-8 bg-cyan-500 w-16 rounded-md text-cyan-50">pb-8</div>
-        <div class="pl-2 bg-cyan-500 w-16 rounded-md text-cyan-50">pl-2</div>
+    <div class="m-auto p-4 max-w-screen-xl">
+      <h1 class="text-4xl text-lime-400 font-bold">Sizing</h1>
+      <div class="mt-6">
+        <p class="text-gray-500">For more details, see the documentation.</p>
+        <ul class="flex flex-col gap-4 sm:flex-row mt-4">
+          <li>
+            <a
+              class="text-1xl text-blue-600 hover:text-blue-800"
+              href="https://tailwindcss.com/docs/width"
+              >Width</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-1xl text-blue-600 hover:text-blue-800"
+              href="https://tailwindcss.com/docs/min-width"
+              >Min-Width</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-1xl text-blue-600 hover:text-blue-800"
+              href="https://tailwindcss.com/docs/max-width"
+              >Max-Width</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-1xl text-blue-600 hover:text-blue-800"
+              href="https://tailwindcss.com/docs/height"
+              >Height</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-1xl text-blue-600 hover:text-blue-800"
+              href="https://tailwindcss.com/docs/min-height"
+              >Min-Height</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-1xl text-blue-600 hover:text-blue-800"
+              href="https://tailwindcss.com/docs/max-height"
+              >Max-Height</a
+            >
+          </li>
+        </ul>
       </div>
-    </div>
-      <div class="mt-10">
-      <h3>Add horizontal padding</h3>
-       <div class="flex flex-row gap-4 flex-wrap justify-center">
-         <!-- Breakpoints and media queries md:px-12 -->
-        <div class="px-8 md:px-12 bg-cyan-500 w-28 rounded-md text-cyan-50">px-8</div>
-       </div>
-      </div>
-       <div class="mt-10">
-          <h3>Add vertical padding</h3>
-           <div class="flex flex-row  justify-center">
-           
-             <div class="py-8 hover:py-10 cursor-pointer bg-cyan-500 w-28 rounded-lg text-cyan-50">py-8</div>
+      <section class="mt-8">
+        <h2 class="text-3xl font-bold">Width</h2>
+        <p>Utilities for setting the width of an element.</p>
+        <h4 class="font-bold mt-5">Fixed widths</h3>
+        <p>Use w-{number} or w-px to set an element to a fixed width.</p>
+         <div class="mt-4 px-24 flex flex-col gap-3 bg-slate-100 py-8">
+          <div class="w-96 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-96</div>
+          <div class="w-80 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-80</div>
+          <div class="w-64 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-64</div>
+          <div class="w-48 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-48</div>
+          <div class="w-40 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-40</div>
+          <div class="w-32 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-32</div>
+          <div class="w-24 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-24</div>
+         </div>
+         <h4 class="font-bold mt-5">Percentage widths</h3>
+          <p>Use w-{fraction} or w-full to set an element to a percentage based width.</p>
+          <div class="mt-4 flex flex-col gap-3 bg-slate-100 py-2 px-2 md:py-8 md:px-24">
+            <div class="flex gap-3 text-center">
+              <div class="w-1/2  bg-sky-600 text-white rounded-xl px-1 py-2">w-1/2</div>
+              <div class="w-1/2  bg-sky-600 text-white rounded-xl px-1 py-2 ">w-1/2</div>
+            </div>
+            <div class="flex gap-3 text-center">
+              <div class="w-2/5 bg-sky-600 text-white rounded-xl px-1 py-2">w-2/5</div>
+              <div class="w-3/5 bg-sky-600 text-white rounded-xl px-1 py-2">w-3/5</div>
+            </div>
+            <div class="flex gap-3 text-center">
+              <div class="w-1/3 bg-sky-600 text-white rounded-xl px-1 py-2">w-1/3</div>
+              <div class="w-2/3 bg-sky-600 text-white rounded-xl px-1 py-2">w-2/3</div>
+            </div>
+            <div class="flex gap-3 text-center">
+              <div class="w-1/4 bg-sky-600 text-white rounded-xl px-1 py-2">w-1/4</div>
+              <div class="w-3/4 bg-sky-600 text-white rounded-xl px-1 py-2">w-3/4</div>
+            </div>
+            <div class="flex gap-3 text-center">
+              <div class="w-1/5 bg-sky-600 text-white rounded-xl px-1 py-2">w-1/5</div>
+              <div class="w-4/5 bg-sky-600 text-white rounded-xl px-1 py-2">w-4/5</div>
+            </div>
+            <div class="flex gap-3 text-center ">
+              <div class="w-1/6 bg-sky-600 text-white rounded-xl px-1 py-2">w-1/6</div>
+              <div class="w-5/6 bg-sky-600 text-white rounded-xl px-1 py-2">w-5/6</div>
+            </div>
+            <div class="w-full text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-full</div>
           </div>
-      </div>
-       
-       <div class="mt-10">
-        <h3>Add padding to all sides</h3>
-       <div class="flex flex-row gap-4 flex-wrap justify-center">
-        <div class="p-8 bg-cyan-500 w-28 rounded-lg text-cyan-50">p-8</div>
-       </div>
-       </div>
-       
-      
-      
-      <div class="mt-10  border	border-emerald-800 border-dashed rounded-sm">
-        <h2 class="text-3xl mt-8 font-bold">Margin</h2>
-        <h3>Add margin to a single side</h3>
-        <div class="flex flex-wrap justify-around mt-2">
-          <div class="mt-6 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">mt-6</div>
-          <div class="mr-4 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">mr-4</div>
-          <div class="mb-8 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">mb-8</div>
-          <div class="ml-2 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">ml-2</div>
-        </div>
-      </div>
-    <div class="flex gap-12 flex-wrap sm:gap-4 mt-10 border	border-emerald-800 border-dashed rounded-sm">
-      <div class="mt-10"><h3>Add horizontal margin</h3>
-        <div class="mx-8 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">mx-8</div>
-      </div>
-      <div class="mt-10">
-        <h3>Add vertical margin</h3>
-        <div class="my-8 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">my-8</div>
-      </div>
-      <div class="mt-10">
-        <h3>Add margin to all sides</h3>
-        <div class="m-8 bg-orange-400 w-28 h-10 rounded-lg text-cyan-50">m-8</div>
-      </div>
-      <div class="mt-10">
-        <h3>Using negative values</h3>
-        <div class="w-auto h-16 bg-sky-400 opacity-20 ..."></div>
-        <div class="-mt-8 bg-sky-300 ...">-mt-8</div>
-      </div>
-    </div>
+          <h4 class="font-bold mt-5">Viewport width</h3>
+          <p>Use w-screen to make an element span the entire width of the viewport.</p>
+          <div class="w-screen bg-fuchsia-200 p-2">
+             <span>w-screen</span>
+          </div>
+          <h4 class="font-bold mt-5">Resetting the width</h3>
+          <p>The w-auto utility can be useful if you need to remove an element’s assigned width under a specific condition, like at a particular breakpoint:</p>
+          <div class="w-full md:w-auto bg-gray-100 p-2">
+           <span>w-full md:w-auto</span>
+          </div>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-3xl font-bold">Min-Width</h2>
+        <p></p>
 
-      <h2 class="text-3xl mt-8 font-bold">Space Between</h2>
-      <p>Utilities for controlling the space between child elements.</p>
-      <div class="mt-4">
-          <h3>Add horizontal space between children</h3>
-          <div class="flex space-x-4 bg-orange-100 text-cyan-50">
-            <div class="bg-slate-500 px-1">01</div>
-            <div class="bg-slate-500 px-1">02</div>
-            <div class="bg-slate-500 px-1">03</div>
-          </div>
-        <div class="mt-6">
-          <h3>Add vertical space between children</h3>
-          <div class="flex flex-col space-y-4 hover:space-y-8 bg-orange-100 text-cyan-50">
-            <div class="bg-slate-500 p-2">01</div>
-            <div class="bg-slate-500 p-2">02</div>
-            <div class="bg-slate-500 p-2">03</div>
-          </div>
-        </div>
-        <div class="mt-4">
-          <h3>Reversing children order</h3>
-          <div class="flex flex-row-reverse space-x-4 space-x-reverse bg-orange-100 text-cyan-50">
-            <div class="bg-slate-500 p-4 rounded-sm">01</div>
-            <div class="bg-slate-500 p-4 rounded-sm">02</div>
-            <div class="bg-slate-500 p-4 rounded-sm">03</div>
-          </div>
-        </div>
-        <div>
-          <h3>Using negative values</h3>
-          <div class="flex -space-x-4 bg-orange-100 text-cyan-50">
-            <div class="bg-slate-500 p-4 rounded-sm">01</div>
-            <div class="bg-slate-500 p-4 rounded-sm">02</div>
-            <div class="bg-slate-500 p-4 rounded-sm">03</div>
-          </div>
-        </div>
-      </div>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-3xl font-bold">Max-Width</h2>
+        <p></p>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-3xl font-bold">Height</h2>
+        <p></p>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-3xl font-bold">Min-Height</h2>
+        <p></p>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-3xl font-bold">Max-Height</h2>
+        <p></p>
+      </section>
     </div>
   </body>
 </html>
