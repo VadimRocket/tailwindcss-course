@@ -19,7 +19,7 @@ $ Install extention: Tailwind CSS IntelliSense
 ### Lessons
 - [x] lesson-1: Setup environment
 - [x] lesson-2: Core Concepts, Base Styles
-- [] lesson-3:  Customization
+- [x] lesson-3:  Customization
 - [] lesson-4: Layout
 - [] lesson-5: Flexbox & Grid
 - [x] lesson-6: Spacing
