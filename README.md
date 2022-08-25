@@ -13,6 +13,7 @@ $ git checkout lesson-2, etc
 $ Install dependencies: yarn install
 $ Run the CSS build file: yarn build
 $ Run Live Server or index.html in your browser
+$ Install extention: Tailwind CSS IntelliSense
 ```
 
 ### Lessons
@@ -21,8 +22,8 @@ $ Run Live Server or index.html in your browser
 - [] lesson-3:  Customization
 - [] lesson-4: Layout
 - [] lesson-5: Flexbox & Grid
-- [] lesson-6: Spacing
-- [] lesson-7: Sizing
+- [x] lesson-6: Spacing
+- [x] lesson-7: Sizing
 - [] lesson-8: Typography
 - [] lesson-9: Backgrounds
 - [] lesson-0: Borders
