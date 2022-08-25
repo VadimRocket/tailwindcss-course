@@ -8,6 +8,20 @@
     <title>TailwindCss</title>
   </head>
   <body>
-    <h1 class="text-3xl text-green-500 uppercase font-bold">Ola =)</h1>
+    <div class="m-auto p-4 max-w-screen-xl">
+      <h1 class="text-4xl text-lime-400 font-bold">Customization</h1>
+      <section class="mt-8">
+        <h2 class="text-3xl font-bold">Configuration</h2>
+        <p class="font-bold">See tailwind.config.js </p>
+        <p>By default, Tailwind will look for an optional tailwind.config.js file at 
+          the root of your project where you can define any customizations.</p>
+        <p>
+          Every section of the config file is optional, so you only have to specify 
+          what you’d like to change. Any missing sections will fall back 
+          to Tailwind’s <a href="https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js">default configuration.</a>
+        </p>
+        <h4 class="font-bold mt-5">Always use complete class names</h4>
+        <div class="{{ error ? 'text-red-600' : 'text-green-600' }}">class="{{ error ? 'text-red-600' : 'text-green-600' }}"</div>
+    </div>
   </body>
 </html>
