@@ -9,129 +9,19 @@
   </head>
   <body>
     <div class="m-auto p-4 max-w-screen-xl">
-      <h1 class="text-4xl text-lime-400 font-bold">Sizing</h1>
-      <div class="mt-6">
-        <p class="text-gray-500">For more details, see the documentation.</p>
-        <ul class="flex flex-col gap-4 sm:flex-row mt-4">
-          <li>
-            <a
-              class="text-1xl text-blue-600 hover:text-blue-800"
-              href="https://tailwindcss.com/docs/width"
-              >Width</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-1xl text-blue-600 hover:text-blue-800"
-              href="https://tailwindcss.com/docs/min-width"
-              >Min-Width</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-1xl text-blue-600 hover:text-blue-800"
-              href="https://tailwindcss.com/docs/max-width"
-              >Max-Width</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-1xl text-blue-600 hover:text-blue-800"
-              href="https://tailwindcss.com/docs/height"
-              >Height</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-1xl text-blue-600 hover:text-blue-800"
-              href="https://tailwindcss.com/docs/min-height"
-              >Min-Height</a
-            >
-          </li>
-          <li>
-            <a
-              class="text-1xl text-blue-600 hover:text-blue-800"
-              href="https://tailwindcss.com/docs/max-height"
-              >Max-Height</a
-            >
-          </li>
-        </ul>
-      </div>
+      <h1 class="text-4xl text-lime-400 font-bold">Customization</h1>
       <section class="mt-8">
-        <h2 class="text-3xl font-bold">Width</h2>
-        <p>Utilities for setting the width of an element.</p>
-        <h4 class="font-bold mt-5">Fixed widths</h3>
-        <p>Use w-{number} or w-px to set an element to a fixed width.</p>
-         <div class="mt-4 px-24 flex flex-col gap-3 bg-slate-100 py-8">
-          <div class="w-96 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-96</div>
-          <div class="w-80 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-80</div>
-          <div class="w-64 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-64</div>
-          <div class="w-48 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-48</div>
-          <div class="w-40 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-40</div>
-          <div class="w-32 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-32</div>
-          <div class="w-24 text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-24</div>
-         </div>
-         <h4 class="font-bold mt-5">Percentage widths</h3>
-          <p>Use w-{fraction} or w-full to set an element to a percentage based width.</p>
-          <div class="mt-4 flex flex-col gap-3 bg-slate-100 py-2 px-2 md:py-8 md:px-24">
-            <div class="flex gap-3 text-center">
-              <div class="w-1/2  bg-sky-600 text-white rounded-xl px-1 py-2">w-1/2</div>
-              <div class="w-1/2  bg-sky-600 text-white rounded-xl px-1 py-2 ">w-1/2</div>
-            </div>
-            <div class="flex gap-3 text-center">
-              <div class="w-2/5 bg-sky-600 text-white rounded-xl px-1 py-2">w-2/5</div>
-              <div class="w-3/5 bg-sky-600 text-white rounded-xl px-1 py-2">w-3/5</div>
-            </div>
-            <div class="flex gap-3 text-center">
-              <div class="w-1/3 bg-sky-600 text-white rounded-xl px-1 py-2">w-1/3</div>
-              <div class="w-2/3 bg-sky-600 text-white rounded-xl px-1 py-2">w-2/3</div>
-            </div>
-            <div class="flex gap-3 text-center">
-              <div class="w-1/4 bg-sky-600 text-white rounded-xl px-1 py-2">w-1/4</div>
-              <div class="w-3/4 bg-sky-600 text-white rounded-xl px-1 py-2">w-3/4</div>
-            </div>
-            <div class="flex gap-3 text-center">
-              <div class="w-1/5 bg-sky-600 text-white rounded-xl px-1 py-2">w-1/5</div>
-              <div class="w-4/5 bg-sky-600 text-white rounded-xl px-1 py-2">w-4/5</div>
-            </div>
-            <div class="flex gap-3 text-center ">
-              <div class="w-1/6 bg-sky-600 text-white rounded-xl px-1 py-2">w-1/6</div>
-              <div class="w-5/6 bg-sky-600 text-white rounded-xl px-1 py-2">w-5/6</div>
-            </div>
-            <div class="w-full text-center bg-sky-600 text-white rounded-xl px-1 py-2">w-full</div>
-          </div>
-          <h4 class="font-bold mt-5">Viewport width</h3>
-          <p>Use w-screen to make an element span the entire width of the viewport.</p>
-          <div class="w-screen bg-fuchsia-200 p-2">
-             <span>w-screen</span>
-          </div>
-          <h4 class="font-bold mt-5">Resetting the width</h3>
-          <p>The w-auto utility can be useful if you need to remove an element’s assigned width under a specific condition, like at a particular breakpoint:</p>
-          <div class="w-full md:w-auto bg-gray-100 p-2">
-           <span>w-full md:w-auto</span>
-          </div>
-      </section>
-      <section class="mt-8">
-        <h2 class="text-3xl font-bold">Min-Width</h2>
-        <p></p>
-
-      </section>
-      <section class="mt-8">
-        <h2 class="text-3xl font-bold">Max-Width</h2>
-        <p></p>
-      </section>
-      <section class="mt-8">
-        <h2 class="text-3xl font-bold">Height</h2>
-        <p></p>
-      </section>
-      <section class="mt-8">
-        <h2 class="text-3xl font-bold">Min-Height</h2>
-        <p></p>
-      </section>
-      <section class="mt-8">
-        <h2 class="text-3xl font-bold">Max-Height</h2>
-        <p></p>
-      </section>
+        <h2 class="text-3xl font-bold">Configuration</h2>
+        <p class="font-bold">See tailwind.config.js </p>
+        <p>By default, Tailwind will look for an optional tailwind.config.js file at 
+          the root of your project where you can define any customizations.</p>
+        <p>
+          Every section of the config file is optional, so you only have to specify 
+          what you’d like to change. Any missing sections will fall back 
+          to Tailwind’s <a href="https://github.com/tailwindlabs/tailwindcss/blob/master/stubs/defaultConfig.stub.js">default configuration.</a>
+        </p>
+        <h4 class="font-bold mt-5">Always use complete class names</h4>
+        <div class="{{ error ? 'text-red-600' : 'text-green-600' }}">class="{{ error ? 'text-red-600' : 'text-green-600' }}"</div>
     </div>
   </body>
 </html>
