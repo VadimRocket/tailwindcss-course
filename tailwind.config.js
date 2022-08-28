@@ -15,6 +15,10 @@ module.exports = {
       aspectRatio: {
         '4/3': '4 / 3',
       },
+      // columns
+      columns: {
+        '4xs': '14rem',
+      }
     },
   },
   plugins: [],
