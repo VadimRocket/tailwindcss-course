@@ -14,7 +14,40 @@
         <section class="mt-8">
           <h2 class="text-2xl font-bold">Container</h2>
           <p>Utilities for controlling the aspect ratio of an element.</p>
-          <p></p>
+          <table class="mt-7 w-full text-left border-collapse">
+            <thead>
+              <tr>
+                <th class="text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300">Class</th>
+                <th class="text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300">Properties</th>
+              </tr>
+            </thead>
+            <tbody class="align-baseline">
+              <tr>
+                <td class="font-mono font-medium text-xs leading-6 text-sky-500  dark:text-sky-400">aspect-auto</td>
+                <td class="font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">aspect-ratio: auto;</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400">aspect-square</td>
+                <td class="font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">aspect-ratio: 1 / 1;</td>
+              </tr>
+              <tr>
+                <td class="font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400">aspect-video</td>
+                <td class="font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">aspect-ratio: 16 / 9;</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4 class="mt-8 text-sm font-semibold text-slate-700">Basic usage</h4>
+          <div class="relative rounded-xl my-6">
+            <iframe class="w-full aspect-video rounded-lg shadow-lg hover:aspect-square" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h4 class="mt-8 text-sm font-semibold text-slate-700">Browser support</h4>
+          <p>The aspect-{ratio} utilities use the native aspect-ratio CSS property, which was not supported in Safari until version 15. Until Safari 15 is popularized, 
+            Tailwind’s <a class="text-blue-400" href="https://github.com/tailwindlabs/tailwindcss-aspect-ratio">aspect-ratio plugin</a>  is a good alternative.</p>
+          <h4 class="mt-8 text-sm font-semibold text-slate-700">Arbitrary values</h4>
+          <p>If you need to use a one-off aspect-ratio value that doesn’t make sense to include in your theme, use square brackets to generate a property on the fly using any arbitrary value.</p>
+          <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>w-full <span class="code-highlight bg-code-highlight">aspect-[4/3]</span><span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://www.youtube.com/...<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">&gt;</span></span></code></pre>
         </section>
         <section class="mt-8">
           <h2 class="text-2xl font-bold">Columns</h2>
