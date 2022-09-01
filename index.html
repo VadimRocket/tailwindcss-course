@@ -1,311 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/styles.css" />
+    <title>TailwindCss</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/public/styles.css" />
-  <title>TailwindCss</title>
-</head>
+  <body>
+    <div class="m-auto p-4 max-w-screen-xl">
+      <h1 class="text-4xl text-lime-400 font-bold">Layout</h1>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Aspect Ratio</h2>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Container</h2>
+        <p>Utilities for controlling the aspect ratio of an element.</p>
 
-<body>
-  <div class="m-auto p-4 max-w-screen-xl">
-    <h1 class="text-4xl text-lime-400 font-bold">Layout</h1>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Aspect Ratio</h2>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Container</h2>
-      <p>Utilities for controlling the aspect ratio of an element.</p>
-      <table class="mt-7 w-full text-left border-collapse">
-        <thead>
-          <tr>
-            <th
-              class="text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300">
-              Class
-            </th>
-            <th
-              class="text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300">
-              Properties
-            </th>
-          </tr>
-        </thead>
-        <tbody">
-          <tr>
-            <td class="font-mono font-medium text-xs leading-6 text-sky-500 dark:text-sky-400">
-              aspect-auto
-            </td>
-            <td class="font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">
-              aspect-ratio: auto;
-            </td>
-          </tr>
-          <tr>
-            <td class="font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400">
-              aspect-square
-            </td>
-            <td class="font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">
-              aspect-ratio: 1 / 1;
-            </td>
-          </tr>
-          <tr>
-            <td class="font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400">
-              aspect-video
-            </td>
-            <td class="font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">
-              aspect-ratio: 16 / 9;
-            </td>
-          </tr>
+        <table class="mt-7 w-full">
+          <thead class="bg-gray-50 border-b-2 border-gray-200">
+            <tr>
+              <th class="p-3 text-xl font-semibold tracking-wide text-left">
+                Class
+              </th>
+              <th class="p-3 text-xl font-semibold tracking-wide text-left">
+                Properties
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white">
+              <td class="font-mono text-lg text-sky-500 p-3">aspect-auto</td>
+              <td class="font-mono text-lg text-indigo-600 p-3">
+                aspect-ratio: auto;
+              </td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="font-mono text-lg text-sky-500 p-3">aspect-square</td>
+              <td class="font-mono text-lg text-indigo-600 p-3">
+                aspect-ratio: 1 / 1;
+              </td>
+            </tr>
+            <tr class="bg-white">
+              <td class="font-mono text-lg text-sky-500 p-3">aspect-video</td>
+              <td class="font-mono text-lg text-indigo-600 p-3">
+                aspect-ratio: 16 / 9;
+              </td>
+            </tr>
           </tbody>
-      </table>
-      <h3 class="mt-8 text-sm font-semibold text-slate-700">Basic usage</h3>
-      <div class="relative rounded-xl my-6">
-        <iframe class="w-full aspect-video rounded-lg shadow-lg hover:aspect-square"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-      <h3 class="mt-8 text-sm font-semibold text-slate-700">Browser support</h3>
-      <p>
-        The aspect-{ratio} utilities use the native aspect-ratio CSS property, which was not
-        supported in Safari until version 15. Until Safari 15 is popularized, Tailwind’s
-        <a class="text-blue-400" href="https://github.com/tailwindlabs/tailwindcss-aspect-ratio">aspect-ratio plugin</a>
-        is a good alternative.
-      </p>
-      <h3 class="mt-8 text-sm font-semibold text-slate-700">Arbitrary values</h3>
-      <p>
-        If you need to use a one-off aspect-ratio value that doesn’t make sense to include in your
-        theme, use square brackets to generate a property on the fly using any arbitrary value.
-      </p>
-      <code>
-          &lt;iframe class=&quot;w-full aspect-[4/3]&quot; src=&quot;https://www.youtube.com/...&quot;&gt;&lt;/iframe&gt;
-        </code>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Container</h2>
-      <p>To center a container, use the mx-auto utility & horizontal padding:</p>
-      <div class="container mx-auto px-6 border border-cyan-900 mt-3 bg-slate-400 text-yellow-100">
-        container
-      </div>
-
-      <h3 class="mt-4 text-sm font-semibold text-slate-700">Responsive variants</h3>
-      <p>Full-width fluid until the `md` breakpoint, then lock to container</p>
-      <!-- Full-width fluid until the `md` breakpoint, then lock to container -->
-      <div class="md:container md:mx-auto border border-cyan-900 bg-slate-400 text-yellow-100">
-        container
-      </div>
-
-      <h3 class="mt-4 text-sm font-semibold text-slate-700">Customizing & tailwind.config.js</h3>
-      <div class="container border border-cyan-900 bg-slate-400 text-yellow-100">container</div>
-    </section>
-
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Columns</h2>
-      <p>Utilities for controlling the number of columns within an element.</p>
-      <p>By default, Tailwind provides a column count scale from 1-12 as well as a column t-shirt scale from 3xs-7xl.
-      </p>
-      <h3 class="mt-3 text-sm font-semibold text-blue-400">Basic usage</h3>
-      <h3 class="mt-3 text-sm font-semibold text-slate-700">Adding based on column count</h3>
-      <p>
-        Use the columns-{count} utilities to set the number of columns that should be created for
-        the content within an element. The column width will be automatically adjusted to
-        accommodate that number.
-      </p>
-      <div class="columns-1 sm:columns-3 gap-4 mt-4">
-        <div class="relative aspect-w-16 aspect-h-9 mt-4 sm:mt-0">
-          <img class="w-full object-cover rounded-lg "
-            src="https://images.unsplash.com/photo-1526400473556-aac12354f3db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
+        </table>
+        <h4 class="mt-10 text-blue-400 font-bold">Basic usage</h4>
+        <div class="relative rounded-xl my-6">
+          <iframe
+            class="w-full aspect-video rounded-lg shadow-lg hover:aspect-square"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div class="relative aspect-w-16 aspect-h-9 mt-4 sm:mt-0">
-          <img class="w-full object-cover rounded-lg"
-            src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2952&q=80" />
-        </div>
-        <div class="relative aspect-w-16 aspect-h-9 mt-4 sm:mt-0">
-          <img class="w-full object-cover rounded-lg"
-            src="https://images.unsplash.com/photo-1526400473556-aac12354f3db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80" />
-        </div>
-      </div>
-      <h3 class="mt-3 text-sm font-semibold text-slate-700">Arbitrary values</h3>
-      <p>&lt;div class=&quot;columns-[10rem]&quot;&gt;&lt;/div&gt;</p>
-    </section>
-
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Break After</h2>
-      <h3 class="mt-8 text-sm font-semibold text-blue-400">Basic usage</h3>
-      <h3 class="mt-1 text-sm font-semibold text-slate-700">Setting the break-after behavior</h3>
-      <p>Use the break-after-{value} utilities to control how a column or page break should behave after an element. For
-        example, use the break-after-column utility to force a column break after an element.</p>
-
-      <div class="columns-2 mt-6">
-        <p>Well, let me tell you something, ...</p>
-        <p class="break-after-column">(break-after-column) Sure, go ahead, laugh...</p>
-        <p>Maybe we can live without...</p>
-        <p>Look. If you think this is...</p>
-      </div>
-      <h3 class="mt-8 text-sm font-semibold text-slate-700">break-after-column</h3>
-      <div class="columns-2">
-        <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-        <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-        <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-        <p class="break-after-column">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?
-        </p>
-        <p>5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-        <p>6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-      </div>
-      <h3 class="mt-6 text-sm font-semibold text-slate-700">md:break-after-column</h3>
-      <div class="columns-1 md:columns-2">
-        <div class="md:break-after-column">
-          <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-          <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-          <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-          <p>4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-          <p>5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-        </div>
-
-      </div>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Break Before</h2>
-      <p>Utilities for controlling how a column or page should break before an element.</p>
-      <h3 class="mt-8 text-sm font-semibold text-blue-400">Basic usage</h3>
-      <h3 class="mt-1 text-sm font-semibold text-slate-700">Setting the break-before behavior</h3>
-      <p>Use the break-before-{value} utilities to control how a column or page break should behave before an element.
-        For example, use the break-before-column utility to force a column break before an element.</p>
-
-      <div class="columns-2 mt-6">
-        <p>Well, let me tell you something, ...</p>
-        <p class="break-after-column">(break-after-column) Sure, go ahead, laugh...</p>
-        <p>Maybe we can live without...</p>
-        <p>Look. If you think this is...</p>
-      </div>
-      <h3 class="mt-8 text-sm font-semibold text-slate-700">break-before-column</h3>
-      <div class="columns-2">
-        <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-        <p class="break-before-column">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?
-        </p>
-        <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-        <p>4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?
-        </p>
-        <p>5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-        <p>6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-      </div>
-      <h3 class="mt-6 text-sm font-semibold text-slate-700">md:break-before-column</h3>
-      <div class="columns-1 md:columns-2">
-        <div class="md:break-before-column">
-          <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-          <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-          <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-          <p>4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-          <p>5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, perspiciatis?</p>
-        </div>
-      </div>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Break Inside</h2>
-      <p>Utilities for controlling how a column or page should break within an element.</p>
-      <p>Use the break-inside-{value} utilities to control how a column or page break should behave within an element.
-        For example, use the break-inside-avoid-column utility to avoid a column break within an element.</p>
-      <h4 class="mt-6 font-bold">break-inside-avoid-column</h4>
-      <div class="columns-2">
-        <p>Well, let me tell you something, ...</p>
-        <p class="break-inside-avoid-column">Sure, go ahead, laugh...</p>
-        <p>Maybe we can live without...</p>
-        <p>Look. If you think this is...</p>
-        <p>Look. If you think this is...</p>
-        <p>Look. If you think this is...</p>
-      </div>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Box Decoration Break</h2>
-      <p>Utilities for controlling how element fragments should be rendered across multiple lines, columns, or pages.
-      </p>
-      <div class="mt-4">
-        <h3 class="font-bold">Class</h3>
-        <ul>
-          <li>box-decoration-clone</li>
-          <li>box-decoration-slice</li>
-        </ul>
-      </div>
-      <div class="columns-1 md:columns-2 mt-6">
+        <h3 class="mt-8 text-sm font-semibold text-slate-700">
+          Browser support
+        </h3>
         <p>
-          <span
-            class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 font-bold text-2xl">
-            Hello<br>
-            World
-          </span>
+          The aspect-{ratio} utilities use the native aspect-ratio CSS property,
+          which was not supported in Safari until version 15. Until Safari 15 is
+          popularized, Tailwind’s
+          <a
+            class="text-blue-400"
+            href="https://github.com/tailwindlabs/tailwindcss-aspect-ratio"
+            >aspect-ratio plugin</a
+          >
+          is a good alternative.
         </p>
-        <p> <span
-            class="box-decoration-clone cursor-pointer hover:box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 font-bold text-2xl">
-            Hello<br>
-            World
-          </span></p>
+        <h3 class="mt-8 text-sm font-semibold text-slate-700">
+          Arbitrary values
+        </h3>
+        <p>
+          If you need to use a one-off aspect-ratio value that doesn’t make
+          sense to include in your theme, use square brackets to generate a
+          property on the fly using any arbitrary value.
+        </p>
+        <code>
+          &lt;iframe class=&quot;w-full aspect-[4/3]&quot;
+          src=&quot;https://www.youtube.com/...&quot;&gt;&lt;/iframe&gt;
+        </code>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Container</h2>
+        <p>
+          To center a container, use the mx-auto utility & horizontal padding:
+        </p>
+        <div
+          class="container mx-auto px-6 border border-cyan-900 mt-3 bg-slate-400 text-yellow-100"
+        >
+          container
+        </div>
+
+        <h3 class="mt-4 text-sm font-semibold text-slate-700">
+          Responsive variants
+        </h3>
+        <p>
+          Full-width fluid until the `md` breakpoint, then lock to container
+        </p>
+        <!-- Full-width fluid until the `md` breakpoint, then lock to container -->
+        <div
+          class="md:container md:mx-auto border border-cyan-900 bg-slate-400 text-yellow-100"
+        >
+          container
+        </div>
+
+        <h3 class="mt-4 text-sm font-semibold text-slate-700">
+          Customizing & tailwind.config.js
+        </h3>
+        <div
+          class="container border border-cyan-900 bg-slate-400 text-yellow-100"
+        >
+          container
+        </div>
+      </section>
+
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Columns</h2>
+        <p>
+          Utilities for controlling the number of columns within an element.
+        </p>
+        <p>
+          By default, Tailwind provides a column count scale from 1-12 as well
+          as a column t-shirt scale from 3xs-7xl.
+        </p>
+        <h4 class="mt-10 text-blue-400 font-bold">Basic usage</h4>
+        <h3 class="mt-3 text-sm font-semibold text-slate-700">
+          Adding based on column count
+        </h3>
+        <p>
+          Use the columns-{count} utilities to set the number of columns that
+          should be created for the content within an element. The column width
+          will be automatically adjusted to accommodate that number.
+        </p>
+        <div class="columns-1 sm:columns-3 gap-4 mt-4">
+          <div class="relative aspect-w-16 aspect-h-9 mt-4 sm:mt-0">
+            <img
+              class="w-full object-cover rounded-lg"
+              src="https://images.unsplash.com/photo-1526400473556-aac12354f3db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+            />
+          </div>
+          <div class="relative aspect-w-16 aspect-h-9 mt-4 sm:mt-0">
+            <img
+              class="w-full object-cover rounded-lg"
+              src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2952&q=80"
+            />
+          </div>
+          <div class="relative aspect-w-16 aspect-h-9 mt-4 sm:mt-0">
+            <img
+              class="w-full object-cover rounded-lg"
+              src="https://images.unsplash.com/photo-1526400473556-aac12354f3db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+            />
+          </div>
+        </div>
+        <h3 class="mt-3 text-sm font-semibold text-slate-700">
+          Arbitrary values
+        </h3>
+        <p>&lt;div class=&quot;columns-[10rem]&quot;&gt;&lt;/div&gt;</p>
+      </section>
+
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Break After</h2>
+        <h4 class="mt-10 text-blue-400 font-bold">Basic usage</h4>
+        <h3 class="mt-1 text-sm font-semibold text-slate-700">
+          Setting the break-after behavior
+        </h3>
+        <p>
+          Use the break-after-{value} utilities to control how a column or page
+          break should behave after an element. For example, use the
+          break-after-column utility to force a column break after an element.
+        </p>
+
+        <div class="columns-2 mt-6">
+          <p>Well, let me tell you something, ...</p>
+          <p class="break-after-column">
+            (break-after-column) Sure, go ahead, laugh...
+          </p>
+          <p>Maybe we can live without...</p>
+          <p>Look. If you think this is...</p>
+        </div>
+        <h3 class="mt-8 text-sm font-semibold text-slate-700">
+          break-after-column
+        </h3>
+        <div class="columns-2">
+          <p>
+            1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+          <p>
+            2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+          <p>
+            3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+          <p class="break-after-column">
+            4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+          <p>
+            5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+          <p>
+            6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+        </div>
+        <h3 class="mt-6 text-sm font-semibold text-slate-700">
+          md:break-after-column
+        </h3>
+        <div class="columns-1 md:columns-2">
+          <div class="md:break-after-column">
+            <p>
+              1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              perspiciatis?
+            </p>
+            <p>
+              2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              perspiciatis?
+            </p>
+            <p>
+              3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              perspiciatis?
+            </p>
+            <p>
+              4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              perspiciatis?
+            </p>
+            <p>
+              5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              perspiciatis?
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Break Before</h2>
+        <p>
+          Utilities for controlling how a column or page should break before an
+          element.
+        </p>
+        <h4 class="mt-10 text-blue-400 font-bold">Basic usage</h4>
+        <h3 class="mt-1 text-sm font-semibold text-slate-700">
+          Setting the break-before behavior
+        </h3>
+        <p>
+          Use the break-before-{value} utilities to control how a column or page
+          break should behave before an element. For example, use the
+          break-before-column utility to force a column break before an element.
+        </p>
+
+        <div class="columns-2 mt-6">
+          <p>Well, let me tell you something, ...</p>
+          <p class="break-after-column">
+            (break-after-column) Sure, go ahead, laugh...
+          </p>
+          <p>Maybe we can live without...</p>
+          <p>Look. If you think this is...</p>
+        </div>
+        <h3 class="mt-8 text-sm font-semibold text-slate-700">
+          break-before-column
+        </h3>
+        <div class="columns-2">
+          <p>
+            1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+          <p class="break-before-column">
+            2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+          <p>
+            3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+          <p>
+            4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+          <p>
+            5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+          <p>
+            6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            perspiciatis?
+          </p>
+        </div>
+        <h3 class="mt-6 text-sm font-semibold text-slate-700">
+          md:break-before-column
+        </h3>
+        <div class="columns-1 md:columns-2">
+          <div class="md:break-before-column">
+            <p>
+              1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              perspiciatis?
+            </p>
+            <p>
+              2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              perspiciatis?
+            </p>
+            <p>
+              3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              perspiciatis?
+            </p>
+            <p>
+              4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              perspiciatis?
+            </p>
+            <p>
+              5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+              perspiciatis?
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Break Inside</h2>
+        <p>
+          Utilities for controlling how a column or page should break within an
+          element.
+        </p>
+        <p>
+          Use the break-inside-{value} utilities to control how a column or page
+          break should behave within an element. For example, use the
+          break-inside-avoid-column utility to avoid a column break within an
+          element.
+        </p>
+        <h4 class="mt-6 font-bold">break-inside-avoid-column</h4>
+        <div class="columns-2">
+          <p>Well, let me tell you something, ...</p>
+          <p class="break-inside-avoid-column">Sure, go ahead, laugh...</p>
+          <p>Maybe we can live without...</p>
+          <p>Look. If you think this is...</p>
+          <p>Look. If you think this is...</p>
+          <p>Look. If you think this is...</p>
+        </div>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Box Decoration Break</h2>
+        <p>
+          Utilities for controlling how element fragments should be rendered
+          across multiple lines, columns, or pages.
+        </p>
+        <div class="mt-4">
+          <h3 class="font-bold">Class</h3>
+          <ul>
+            <li>box-decoration-clone</li>
+            <li>box-decoration-slice</li>
+          </ul>
+        </div>
+        <div class="columns-1 md:columns-2 mt-6">
+          <p>
+            <span
+              class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 font-bold text-2xl"
+            >
+              Hello<br />
+              World
+            </span>
+          </p>
+          <p>
+            <span
+              class="box-decoration-clone cursor-pointer hover:box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 font-bold text-2xl"
+            >
+              Hello<br />
+              World
+            </span>
+          </p>
+        </div>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Box Sizing</h2>
+        <p>
+          Utilities for controlling how the browser should calculate an
+          element's total size.
+        </p>
+        <div class="mt-4">
+          <h3 class="font-bold">Class</h3>
+          <ul>
+            <li>box-border</li>
+            <li>box-content</li>
+          </ul>
+        </div>
+
+        <div class="columns-1 md:columns-2">
+          <div class="box-border h-32 w-32 p-4 border-4 mt-4">
+            <div class="h-full w-full bg-red-500 text-white">box-border</div>
+          </div>
+          <div class="box-content h-32 w-32 p-4 border-4 mt-4">
+            <div class="h-full w-full bg-blue-500 text-white">box-content</div>
+          </div>
+        </div>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Display</h2>
+        <p>Utilities for controlling the display box type of an element.</p>
+        <div class="mt-10 relative"><h2 class="group flex whitespace-pre-wrap relative scroll-mt-[var(--scroll-mt)] -ml-4 pl-4" id="class-reference">
+          <a href="#class-reference" class="absolute -ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100" aria-label="Anchor">&ZeroWidthSpace;<div class="w-6 h-6 text-slate-400 ring-1 ring-slate-900/5 rounded-md shadow-sm flex items-center justify-center hover:ring-slate-900/10 hover:shadow hover:text-slate-700 dark:bg-slate-700 dark:text-slate-300 dark:shadow-none dark:ring-0"><svg width="12" height="12" fill="none" aria-hidden="true"><path d="M3.75 1v10M8.25 1v10M1 3.75h10M1 8.25h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></div></a><span><span class="sr-only">Quick reference</span></span></h2><div class="overflow-hidden lg:overflow-auto scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar:bg-transparent scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 scrollbar-track:!rounded dark:scrollbar-track:!bg-slate-500/[0.16] dark:scrollbar-thumb:!bg-slate-500/50 max-h-96 supports-scrollbars:pr-2 lg:max-h-96"><table class="w-full text-left border-collapse"><thead><tr><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pr-2 border-b border-slate-200 dark:border-slate-400/20">Class</div></th><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pl-2 border-b border-slate-200 dark:border-slate-400/20">Properties</div></th></tr></thead><tbody class="align-baseline"><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400">block</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">display: block;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">inline-block</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: inline-block;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">inline</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: inline;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">flex</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: flex;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">inline-flex</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: inline-flex;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">table</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: table;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">inline-table</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: inline-table;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">table-caption</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: table-caption;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">table-cell</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: table-cell;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">table-column</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: table-column;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">table-column-group</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: table-column-group;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">table-footer-group</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: table-footer-group;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">table-header-group</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: table-header-group;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">table-row-group</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: table-row-group;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">table-row</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: table-row;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">flow-root</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: flow-root;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">grid</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: grid;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">inline-grid</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: inline-grid;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">contents</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: contents;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">list-item</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: list-item;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">hidden</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">display: none;
+        </td></tr></tbody></table><div class="sticky bottom-0 h-px -mt-px bg-slate-200 dark:bg-slate-400/20"></div></div><div class="inset-x-0 flex justify-center lg:hidden -mt-9 relative"><div class="absolute inset-x-0 bg-gradient-to-t from-white dark:from-slate-900 -top-8 bottom-0"></div><button type="button" class="relative text-sm font-semibold text-slate-900 bg-white py-2 px-4 rounded-full ring-1 ring-slate-900/10 shadow-sm dark:bg-slate-800 dark:text-slate-200 dark:highlight-white/5">Show all classes</button></div></div>
+       
+      <h4 class="mt-10 text-blue-400 font-bold">Basic usage</h4>
+      <h3 class="mt-4 text-lg font-bold">Block & Inline</h3>
+      <p class="text-gray-700 font-medium">Use inline, inline-block, and block to control the flow of text and elements.</p>
+      <div class="w-72 text-gray-600">
+        When controlling the flow of text, using the CSS property
+        <span class="inline bg-sky-100 font-medium rounded-md px-1">display: inline</span>
+        will cause the text inside the element to wrap normally.
+      
+        While using the property <span class="inline-block bg-sky-100 font-medium rounded-md px-1">display: inline-block</span>
+        will wrap the element to prevent the text inside from extending beyond its parent.
+      
+        Lastly, using the property <span class="block bg-sky-100 font-medium rounded-md px-1">display: block</span>
+        will put the element on its own line and fill its parent.
       </div>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Box Sizing</h2>
-      <p>Utilities for controlling how the browser should calculate an element's total size.</p>
-      <div class="mt-4">
-        <h3 class="font-bold">Class</h3>
-        <ul>
-          <li>box-border</li>
-          <li>box-content</li>
-        </ul>
+      <h3 class="mt-4 text-lg font-bold">Flow Root</h3>     
+      <p>Use flow-root to create a block-level element with its own <a class="text-blue-400 hover:underline" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> .</p> 
+      <div class="p-4 w-80 ">
+        <div class="flow-root bg-yellow-50 px-4">
+          <div class="my-4">Well, let me tell you something, funny boy. Y'know that little stamp, the one that says "New York Public Library"? Well that may not mean anything to you, but that means a lot to me. One whole hell of a lot.</div>
+        </div>
+        <div class="flow-root">
+          <div class="my-4">Sure, go ahead, laugh if you want to. I've seen your type before: Flashy, making the scene, flaunting convention. Yeah, I know what you're thinking. What's this guy making such a big stink about old library books? Well, let me give you a hint, junior..</div>
+        </div>
+        <div class="bg-pink-400 px-4 text-white">
+          <div class="my-4"><span class="bg-black px-1">If NO flow-root class, no margin-top & margin-bottom</span>   I know what you're thinking. What's this guy making such a big stink about old library books? Well, let me give you a hint, junior..</div>
+        </div>
       </div>
 
-      <div class="columns-1 md:columns-2">
-        <div class="box-border h-32 w-32 p-4 border-4 mt-4">
-          <div class="h-full w-full bg-red-500 text-white">box-border</div>
-        </div>
-        <div class="box-content h-32 w-32 p-4 border-4  mt-4">
-          <div class="h-full w-full bg-blue-500 text-white">box-content</div>
-        </div>
-      </div>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Display</h2>
-      <p></p>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Floats</h2>
-      <p></p>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Clear</h2>
-      <p></p>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Isolation</h2>
-      <p></p>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Object Fit</h2>
-      <p></p>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Object Position</h2>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Overflow</h2>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Overscroll Behavior</h2>
-      <p></p>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Position</h2>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Top / Right / Bottom / Left</h2>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Visibility</h2>
-      <p></p>
-    </section>
-    <section class="mt-8">
-      <h2 class="text-2xl font-bold">Z-Index</h2>
-      <p></p>
-    </section>
-  </div>
-</body>
+        <h3 class="mt-4 text-lg font-bold">Flex</h3>  
+        <p>Use flex to create a block-level flex container.</p>
 
+        <div class="flex items-center gap-5 w-80 my-6 justify-center py-8 border rounded-lg border-gray-100 hover:border-gray-200 cursor-pointer">
+          <img  class='w-12 rounded-full' src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=256&h=256&q=80" alt="pic">
+          <div class="flex flex-col">
+            <strong>Andrew Alfred</strong>
+            <span class="text-gray-500">Technical advisor</span>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg font-bold">Inline Flex</h3>  
+        <p>Use inline-flex to create an inline flex container that flows with text.</p>
+        &lt;p&gt;&lt;span class=&quot;inline-flex items-baseline&quot;&gt;some test&lt;/span&gt;&lt;/p&gt;
+        <p class="mt-4">
+          Today I spent most of the day researching ways to
+          <span class="inline-flex items-baseline"> 
+            <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=256&h=256&q=80" alt="" class="self-center w-5 h-5 rounded-full mx-1" />
+            <span>Kramer</span>
+          </span>
+          keeps telling me there is no way to make it work, that ...
+        </p>
+
+        <h3 class="mt-4 text-lg font-bold">Grid</h3>  
+        <p>Use grid to create a grid container.</p>
+
+        <div class=" md:w-10/12 bg-slate-100 shadow-sm	rounded-lg  p-5 md:p-10  mt-4">
+          <div class="grid gap-2 md:gap-4 grid-cols-3 grid-rows-3">
+            <div class="bg-fuchsia-500 text-white text-center p-4 rounded-lg font-bold">1</div>
+            <div class="bg-fuchsia-500 text-white text-center p-4 rounded-lg font-bold">2</div>
+            <div class="bg-fuchsia-500 text-white text-center p-4 rounded-lg font-bold">3</div>
+            <div class="bg-fuchsia-500 text-white text-center p-4 rounded-lg font-bold">4</div>
+            <div class="bg-fuchsia-500 text-white text-center p-4 rounded-lg font-bold">5</div>
+            <div class="bg-fuchsia-500 text-white text-center p-4 rounded-lg font-bold">6</div>
+            <div class="bg-fuchsia-500 text-white text-center p-4 rounded-lg font-bold">7</div>
+            <div class="bg-fuchsia-500 text-white text-center p-4 rounded-lg font-bold">8</div>
+            <div class="bg-fuchsia-500 text-white text-center p-4 rounded-lg font-bold">9</div>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg font-bold"> Inline Grid</h3>  
+        <p>Use inline-grid to create an inline grid container.</p>
+        <p>span.inline-grid.grid-cols-3.gap-4>span{$}*6</p>
+       <div class="md:w-10/12 bg-slate-100 shadow-smrounded-lg p-5 md:p-10 mt-6 ">
+        <span class="inline-grid grid-cols-3 gap-4">
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">01</span>
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">02</span>
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">03</span>
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">04</span>
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">05</span>
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">06</span>
+        </span>
+        <span class="inline-grid grid-cols-3 gap-4 md:ml-4">
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">01</span>
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">02</span>
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">03</span>
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">04</span>
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">05</span>
+          <span class="bg-sky-500 text-white text-center p-4 rounded-lg font-bold">06</span>
+        </span>
+       </div>
+
+        <h3 class="mt-4 text-lg font-bold">Contents</h3>  
+        <p>Use contents to create a “phantom” container whose children act like direct children of the parent.</p>
+        <div class="md:w-10/12 bg-slate-100 shadow-smrounded-lg p-5 md:p-10 mt-6 ">
+          <div class="flex gap-4">
+            <div class="flex-1  bg-orange-500 text-white text-center p-4 rounded-lg font-bold">01</div>
+            <div class="contents">
+              <div class="flex-1  bg-sky-500 text-white text-center p-4 rounded-lg font-bold">02</div>
+              <div class="flex-1  bg-sky-500 text-white text-center p-4 rounded-lg font-bold">03</div>
+            </div>
+            <div class="flex-1  bg-orange-500 text-white text-center p-4 rounded-lg font-bold">04</div>
+          </div>
+        </div>
+        <!-- <h3 class="mt-4 text-lg font-bold">RRRR</h3>  
+        <p>TTT</p> -->
+      
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Floats</h2>
+        <p></p>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Clear</h2>
+        <p></p>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Isolation</h2>
+        <p></p>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Object Fit</h2>
+        <p></p>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Object Position</h2>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Overflow</h2>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Overscroll Behavior</h2>
+        <p></p>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Position</h2>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Top / Right / Bottom / Left</h2>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Visibility</h2>
+        <p></p>
+      </section>
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Z-Index</h2>
+        <p></p>
+      </section>
+    </div>
+  </body>
 </html>
