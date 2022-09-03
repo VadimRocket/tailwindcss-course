@@ -99,7 +99,7 @@
           container
         </div>
 
-        <h3 class="mt-4 text-sm font-semibold text-slate-700">
+        <h3 class="mt-8 text-sm font-semibold text-slate-700">
           Responsive variants
         </h3>
         <p>
@@ -112,7 +112,7 @@
           container
         </div>
 
-        <h3 class="mt-4 text-sm font-semibold text-slate-700">
+        <h3 class="mt-8 text-sm font-semibold text-slate-700">
           Customizing & tailwind.config.js
         </h3>
         <div
@@ -429,7 +429,7 @@
         </td></tr></tbody></table><div class="sticky bottom-0 h-px -mt-px bg-slate-200 dark:bg-slate-400/20"></div></div><div class="inset-x-0 flex justify-center lg:hidden -mt-9 relative"><div class="absolute inset-x-0 bg-gradient-to-t from-white dark:from-slate-900 -top-8 bottom-0"></div><button type="button" class="relative text-sm font-semibold text-slate-900 bg-white py-2 px-4 rounded-full ring-1 ring-slate-900/10 shadow-sm dark:bg-slate-800 dark:text-slate-200 dark:highlight-white/5">Show all classes</button></div></div>
        
       <h4 class="mt-10 text-blue-400 font-bold">Basic usage</h4>
-      <h3 class="mt-4 text-lg font-bold">Block & Inline</h3>
+      <h3 class="mt-8 text-lg font-bold">Block & Inline</h3>
       <p class="text-gray-700 font-medium">Use inline, inline-block, and block to control the flow of text and elements.</p>
       <div class="w-72 text-gray-600">
         When controlling the flow of text, using the CSS property
@@ -442,7 +442,7 @@
         Lastly, using the property <span class="block bg-sky-100 font-medium rounded-md px-1">display: block</span>
         will put the element on its own line and fill its parent.
       </div>
-      <h3 class="mt-4 text-lg font-bold">Flow Root</h3>     
+      <h3 class="mt-8 text-lg font-bold">Flow Root</h3>     
       <p>Use flow-root to create a block-level element with its own <a class="text-blue-400 hover:underline" href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context">block formatting context</a> .</p> 
       <div class="p-4 w-80 ">
         <div class="flow-root bg-yellow-50 px-4">
@@ -456,7 +456,7 @@
         </div>
       </div>
 
-        <h3 class="mt-4 text-lg font-bold">Flex</h3>  
+        <h3 class="mt-8 text-lg font-bold">Flex</h3>  
         <p>Use flex to create a block-level flex container.</p>
 
         <div class="flex items-center gap-5 w-80 my-6 justify-center py-8 border rounded-lg border-gray-100 hover:border-gray-200 cursor-pointer">
@@ -467,7 +467,7 @@
           </div>
         </div>
 
-        <h3 class="mt-4 text-lg font-bold">Inline Flex</h3>  
+        <h3 class="mt-8 text-lg font-bold">Inline Flex</h3>  
         <p>Use inline-flex to create an inline flex container that flows with text.</p>
         &lt;p&gt;&lt;span class=&quot;inline-flex items-baseline&quot;&gt;some test&lt;/span&gt;&lt;/p&gt;
         <p class="mt-4">
@@ -479,7 +479,7 @@
           keeps telling me there is no way to make it work, that ...
         </p>
 
-        <h3 class="mt-4 text-lg font-bold">Grid</h3>  
+        <h3 class="mt-8 text-lg font-bold">Grid</h3>  
         <p>Use grid to create a grid container.</p>
 
         <div class=" md:w-10/12 bg-slate-100 shadow-sm	rounded-lg  p-5 md:p-10  mt-4">
@@ -496,7 +496,7 @@
           </div>
         </div>
 
-        <h3 class="mt-4 text-lg font-bold"> Inline Grid</h3>  
+        <h3 class="mt-8 text-lg font-bold"> Inline Grid</h3>  
         <p>Use inline-grid to create an inline grid container.</p>
         <p>span.inline-grid.grid-cols-3.gap-4>span{$}*6</p>
        <div class="md:w-10/12 bg-slate-100 shadow-smrounded-lg p-5 md:p-10 mt-6 ">
@@ -518,7 +518,7 @@
         </span>
        </div>
 
-        <h3 class="mt-4 text-lg font-bold">Contents</h3>  
+        <h3 class="mt-8 text-lg font-bold">Contents</h3>  
         <p>Use contents to create a “phantom” container whose children act like direct children of the parent.</p>
         <div class="md:w-10/12 bg-slate-100 shadow-smrounded-lg p-5 md:p-10 mt-6 ">
           <div class="flex gap-4">
@@ -530,13 +530,41 @@
             <div class="flex-1  bg-orange-500 text-white text-center p-4 rounded-lg font-bold">04</div>
           </div>
         </div>
-        <!-- <h3 class="mt-4 text-lg font-bold">RRRR</h3>  
-        <p>TTT</p> -->
-      
       </section>
       <section class="mt-8">
         <h2 class="text-2xl font-bold">Floats</h2>
-        <p></p>
+        <p>Utilities for controlling the wrapping of content around an element.</p>
+        <p><span class="font-bold">classes:</span>  float-right, float-left, float-none</p>
+
+        <h3 class="mt-8 text-lg font-bold">Floating elements to the right</h3>  
+        <p class="font-bold text-gray-500">Use float-right to float an element to the right of its container.</p>
+
+        <div class="w-50 mt-5">
+          <div class="float-right ml-5">
+            <img class="object-cover rounded-lg w-40" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2952&q=80">
+          </div>
+          <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum maxime laborum eos. Dolorem esse iste officiis cumque sequi! Expedita veritatis repudiandae iusto alias aspernatur ab eveniet quo totam sit sapiente velit provident maxime, eum quasi voluptatem obcaecati ea aperiam nulla praesentium mollitia. Ducimus a consequatur commodi, reprehenderit soluta placeat! Illo, id natus consectetur veniam minus adipisci officia eos reprehenderit excepturi.</p>
+        </div>
+
+          <h3 class="mt-8 text-lg font-bold">Floating elements to the left</h3>  
+          <p class="font-bold text-gray-500">Use float-left to float an element to the left of its container.</p>
+          <div class="w-50 mt-5">
+            <div class="float-left mr-5">
+              <img class="object-cover rounded-lg w-40" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2952&q=80">
+            </div>
+            <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum maxime laborum eos. Dolorem esse iste officiis cumque sequi! Expedita veritatis repudiandae iusto alias aspernatur ab eveniet quo totam sit sapiente velit provident maxime, eum quasi voluptatem obcaecati ea aperiam nulla praesentium mollitia. Ducimus a consequatur commodi, reprehenderit soluta placeat! Illo, id natus consectetur veniam minus adipisci officia eos reprehenderit excepturi.</p>
+          </div>
+
+          <h3 class="mt-8 text-lg font-bold">Disabling a float,  Hover, focus, and other states, Breakpoints and media queries</h3>  
+          <p>Use float-none to reset any floats that are applied to an element. This is the default value for the float property.</p>
+          <div class="w-50 mt-5">
+            <div class="float-none hover:float-left hover:mr-5 md:float-none sm:float-left sm:mr-5">
+              <img class="object-cover rounded-lg w-40" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2952&q=80">
+            </div>
+            <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum maxime laborum eos. Dolorem esse iste officiis cumque sequi! Expedita veritatis repudiandae iusto alias aspernatur ab eveniet quo totam sit sapiente velit provident maxime, eum quasi voluptatem obcaecati ea aperiam nulla praesentium mollitia. Ducimus a consequatur commodi, reprehenderit soluta placeat! Illo, id natus consectetur veniam minus adipisci officia eos reprehenderit excepturi.</p>
+          </div>
+           <!-- <h3 class="mt-8 text-lg font-bold">RRRR</h3>  
+          <p>TTT</p> -->
       </section>
       <section class="mt-8">
         <h2 class="text-2xl font-bold">Clear</h2>
