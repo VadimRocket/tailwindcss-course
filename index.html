@@ -848,6 +848,7 @@
         <p>&lt;img class=&quot;object-contain md:object-scale-down&quot;&gt;</p>
       </section>
       <section class="mt-8">
+        <h3 class="mt-8 text-lg font-bold">Object Position</h3>
         <p>
           Utilities for controlling how a replaced element's content should be
           positioned within its container.
@@ -1039,6 +1040,25 @@
             </div>
           </div>
         </div>
+        <h3 class="mt-8 text-lg font-bold">Customizing your theme</h3>
+        <p>By default, Tailwind provides nine object position utilities. 
+          You can customize these values by editing <stong>theme.objectPosition </stong>
+          or <strong>theme.extend.objectPosition</strong> in your tailwind.config.js file.</p>
+        <pre><code>
+          module.exports = {
+            theme: {
+              extend: {
+                objectPosition: {
+                  'center-bottom': 'center bottom',
+                }
+              },
+            }
+          }
+        </code></pre>
+        <h3 class="mt-8 text-lg font-bold">Arbitrary values</h3>
+       
+        <p>If you need to use a one-off object-position value that doesn’t make sense to include in your theme, use square brackets to generate a property on the fly using any arbitrary value.</p>
+         <p>&lt;img class=&quot;object-[center_bottom]&quot; src=&quot;...&quot;&gt;</p>
       </section>
       <section class="mt-8">
         <!-- <h2 class="text-2xl font-bold">Object Position</h2>
