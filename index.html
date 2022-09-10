@@ -2211,7 +2211,103 @@
       </section>
       <section class="mt-8">
         <h2 class="text-2xl font-bold">Overscroll Behavior</h2>
-        <p></p>
+        <p>Utilities for controlling how the browser behaves when reaching the boundary of a scrolling area.</p>
+        <h4 class="mt-10 text-blue-400 font-bold">Basic usage</h4>
+          <h3 class="mt-3 text-lg font-bold">Preventing parent overscrolling</h3>
+          <p>Use <code class="font-bold">overscroll-contain</code> to prevent scrolling in the target area from triggering scrolling in the parent element, but preserve “bounce” effects when scrolling past the end of the container in operating systems that support it.</p>
+          <!-- example -->
+           <article class="rounded-lg overscroll-contain overflow-auto  mt-7 h-48 bg-white dark:bg-slate-800 shadow-sm p-8 space-y-4 text-slate-700 dark:text-slate-400 text-sm sm:text-base leading-6 sm:leading-7">
+            <header>
+              <p class="px-2 bg-fuchsia-100 w-4/12 rounded-lg text-fuchsia-700">Open from <time>11:00</time> to <time>22:00</time> every weekday.</p>
+              <h4 class="font-bold mt-4">Title</h4>
+              <h5 class="text-gray-400">Subtitle</h5>
+            </header>
+            <div>
+              <p>Well, let me tell you something, funny boy. Y'know that little stamp, the one that says "New York Public Library"? Well that may not mean anything to you, but that means a lot to me. One whole hell of a lot.</p>
+              <p>Sure, go ahead, laugh if you want to. I've seen your type before: Flashy, making the scene, flaunting convention. Yeah, I know what you're thinking. What's this guy making such a big stink about old library books? Well, let me give you a hint, junior.</p>
+              <p>Maybe we can live without libraries, people like you and me. Maybe. Sure, we're too old to change the world, but what about that kid, sitting down, opening a book, right now, in a branch at the local library and finding drawings of pee-pees and wee-wees on the Cat in the Hat and the Five Chinese Brothers? Doesn't HE deserve better?</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, iste esse deleniti hic sunt error aperiam voluptatem deserunt ut odit aspernatur iure cumque, laboriosam cum? Dolor, quis atque! Eum, quos.</p>
+            </div> 
+          </article>
+          <!-- . example -->
+
+          <h3 class="mt-5 text-lg font-bold">Preventing overscroll bouncing</h3>
+          <p>Use <code class="font-bold">overscroll-none</code>  to prevent scrolling in the target area from triggering scrolling in the parent element, and also prevent “bounce” effects when scrolling past the end of the container.</p>
+          <!-- example -->
+           <article class="rounded-lg overscroll-none  overflow-auto  mt-7 h-48 bg-white dark:bg-slate-800 shadow-sm p-8 space-y-4 text-slate-700 dark:text-slate-400 text-sm sm:text-base leading-6 sm:leading-7">
+            <header>
+              <p class="px-2 bg-sky-100 w-4/12 rounded-lg text-sky-700">Open from <time>10:00</time> to <time>22:00</time> every weekday.</p>
+              <h4 class="font-bold mt-4">Title</h4>
+              <h5 class="text-gray-400">Subtitle</h5>
+            </header>
+            <div>
+              <p>Well, let me tell you something, funny boy. Y'know that little stamp, the one that says "New York Public Library"? Well that may not mean anything to you, but that means a lot to me. One whole hell of a lot.</p>
+              <p>Sure, go ahead, laugh if you want to. I've seen your type before: Flashy, making the scene, flaunting convention. Yeah, I know what you're thinking. What's this guy making such a big stink about old library books? Well, let me give you a hint, junior.</p>
+              <p>Maybe we can live without libraries, people like you and me. Maybe. Sure, we're too old to change the world, but what about that kid, sitting down, opening a book, right now, in a branch at the local library and finding drawings of pee-pees and wee-wees on the Cat in the Hat and the Five Chinese Brothers? Doesn't HE deserve better?</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, iste esse deleniti hic sunt error aperiam voluptatem deserunt ut odit aspernatur iure cumque, laboriosam cum? Dolor, quis atque! Eum, quos.</p>
+            </div> 
+          </article>
+          <!-- . example -->
+
+        <h3 class="mt-5 text-lg font-bold">Using the default overscroll behavior</h3>
+          <p>Use <code class="font-bold">overscroll-auto</code>  to make it possible for the user to continue scrolling a parent scroll area when they reach the boundary of the primary scroll area.</p>
+          <!-- example -->
+           <article class="rounded-lg overscroll-auto overflow-auto  mt-7 h-48 bg-white dark:bg-slate-800 shadow-sm p-8 space-y-4 text-slate-700 dark:text-slate-400 text-sm sm:text-base leading-6 sm:leading-7">
+            <header>
+              <p class="px-2 bg-gray-100 w-4/12 rounded-lg text-gray-700">Open from <time>09:00</time> to <time>21:00</time> every weekday.</p>
+              <h4 class="font-bold mt-4">Title</h4>
+              <h5 class="text-gray-400">Subtitle</h5>
+            </header>
+            <div>
+              <p>Well, let me tell you something, funny boy. Y'know that little stamp, the one that says "New York Public Library"? Well that may not mean anything to you, but that means a lot to me. One whole hell of a lot.</p>
+              <p>Sure, go ahead, laugh if you want to. I've seen your type before: Flashy, making the scene, flaunting convention. Yeah, I know what you're thinking. What's this guy making such a big stink about old library books? Well, let me give you a hint, junior.</p>
+              <p>Maybe we can live without libraries, people like you and me. Maybe. Sure, we're too old to change the world, but what about that kid, sitting down, opening a book, right now, in a branch at the local library and finding drawings of pee-pees and wee-wees on the Cat in the Hat and the Five Chinese Brothers? Doesn't HE deserve better?</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, iste esse deleniti hic sunt error aperiam voluptatem deserunt ut odit aspernatur iure cumque, laboriosam cum? Dolor, quis atque! Eum, quos.</p>
+            </div> 
+          </article>
+          <!-- . example -->
+          <h3 class="mt-8 text-lg font-bold">Hover, focus, and other states</h3>
+          <p>
+            &lt;div class=&quot;overscroll-auto hover:overscroll-contain&quot;&gt;
+              &lt;!-- ... --&gt;
+            &lt;/div&gt;
+          </p>
+          <h3 class="mt-8 text-lg font-bold">Breakpoints and media queries</h3>
+          <p>
+              &lt;div class=&quot;overscroll-auto md:overscroll-contain&quot;&gt;
+              &lt;!-- ... --&gt;
+            &lt;/div&gt;
+          </p>
+
+
+           <h3 class="mt-8 text-lg font-bold">RRRR</h3>
+          <p></p>
+          <!-- example -->
+          <!-- . example -->
+
+
+           <h3 class="mt-8 text-lg font-bold">RRRR</h3>
+          <p></p>
+          <!-- example -->
+          <!-- . example -->
+
+
+           <h3 class="mt-8 text-lg font-bold">RRRR</h3>
+          <p></p>
+          <!-- example -->
+          <!-- . example -->
+
+
+           <h3 class="mt-8 text-lg font-bold">RRRR</h3>
+          <p></p>
+          <!-- example -->
+          <!-- . example -->
+
+
+           <h3 class="mt-8 text-lg font-bold">RRRR</h3>
+          <p></p>
+          <!-- example -->
+          <!-- . example -->
       </section>
       <section class="mt-8">
         <h2 class="text-2xl font-bold">Position</h2>
