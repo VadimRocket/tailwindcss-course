@@ -1,12 +1,11 @@
-
 # tailwindcss-course
 
 ### Useful Links:
-  - https://tailwindcss.com
-   
 
+- https://tailwindcss.com
 
 ### Quick Start
+
 ```sh
 $ Clone the repository: https://github.com/VadimRocket/tailwindcss-course.git
 $ Go to the folder with the project: cd tailwindcss-course
@@ -20,10 +19,11 @@ $ Install extention: Tailwind CSS IntelliSense
 ```
 
 ### Lessons
+
 - [x] lesson-1: Setup environment
 - [x] lesson-2: Core Concepts, Base Styles
-- [x] lesson-3:  Customization
-- [] lesson-4: Layout
+- [x] lesson-3: Customization
+- [x] lesson-4: Layout
 - [] lesson-5: Flexbox & Grid
 - [x] lesson-6: Spacing
 - [x] lesson-7: Sizing
