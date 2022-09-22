@@ -202,21 +202,114 @@
           </div>
         </div>
       
-
-
-         <h3 class="mt-4 text-lg font-bold">Breakpoints and media queries</h3>
-         <code>&lt;div class=&quot;flex flex-col md:flex-row&quot;&gt;
+        <h3 class="mt-4 text-lg font-bold">Breakpoints and media queries</h3>
+        <code>&lt;div class=&quot;flex flex-col md:flex-row&quot;&gt;
           &lt;!-- ... --&gt;
           &lt;/div&gt;
         </code>
       </section>
+      <!-- Flex Wrap -->
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Flex Wrap</h2>
+        <p>Utilities for controlling how flex items wrap.</p>
+        <div class="mt-10 relative"><h2 class="group flex whitespace-pre-wrap relative scroll-mt-[var(--scroll-mt)] -ml-4 pl-4" id="class-reference"><a href="#class-reference" class="absolute -ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100" aria-label="Anchor">&ZeroWidthSpace;<div class="w-6 h-6 text-slate-400 ring-1 ring-slate-900/5 rounded-md shadow-sm flex items-center justify-center hover:ring-slate-900/10 hover:shadow hover:text-slate-700 dark:bg-slate-700 dark:text-slate-300 dark:shadow-none dark:ring-0"><svg width="12" height="12" fill="none" aria-hidden="true"><path d="M3.75 1v10M8.25 1v10M1 3.75h10M1 8.25h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></div></a><span><span class="sr-only">Quick reference</span></span></h2><div class="overflow-hidden lg:overflow-auto scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar:bg-transparent scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 scrollbar-track:!rounded dark:scrollbar-track:!bg-slate-500/[0.16] dark:scrollbar-thumb:!bg-slate-500/50"><table class="w-full text-left border-collapse"><thead><tr><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pr-2 border-b border-slate-200 dark:border-slate-400/20">Class</div></th><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pl-2 border-b border-slate-200 dark:border-slate-400/20">Properties</div></th></tr></thead><tbody class="align-baseline"><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400">flex-wrap</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">flex-wrap: wrap;
+          </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">flex-wrap-reverse</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">flex-wrap: wrap-reverse;
+          </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">flex-nowrap</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">flex-wrap: nowrap;
+          </td></tr></tbody></table><div class="sticky bottom-0 h-px -mt-px bg-slate-200 dark:bg-slate-400/20"></div></div></div>
+        <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+        <h3 class="mt-4 text-lg font-bold">Don't wrap</h3>
+        <p>Use flex-nowrap to prevent flex items from wrapping, causing inflexible items to overflow the container if necessary:</p>
+        <div class="relative bg-slate-50 rounded-lg overflow-hidden">
+          <div class="border border-blue-100 p-4 rounded-lg mt-4 relative overflow-auto">
+            <div class="flex flex-row gap-2 flex-nowrap leading-6">
+              <div class="w-2/5 flex-none">
+                <div class="w-96 h-14 flex items-center justify-center bg-neutral-600 rounded-lg text-slate-50 shadow-lg">01</div>
+              </div>
+              <div class="w-2/5 flex-none">
+                <div class="w-96 h-14 flex items-center justify-center bg-neutral-600 rounded-lg text-slate-50 shadow-lg">02</div>
+              </div>
+              <div class="w-2/5 flex-none">
+                <div class="w-96 h-14 flex items-center justify-center bg-neutral-600 rounded-lg text-slate-50 shadow-lg">03</div>
+              </div>
+              <div class="w-2/5 flex-none">
+                <div class="w-96 h-14 flex items-center justify-center bg-neutral-600 rounded-lg text-slate-50 shadow-lg">04</div>
+              </div>
+              <div class="w-2/5 flex-none">
+                <div class="w-96 h-14 flex items-center justify-center bg-neutral-600 rounded-lg text-slate-50 shadow-lg">05</div>
+              </div>
+            </div>
+          </div>  
+        </div>
 
+        <h3 class="mt-4 text-lg font-bold">Wrap normally</h3>
+        <p>Use flex-wrap to allow flex items to wrap:</p>
+        <div class="relative bg-slate-50 rounded-lg overflow-hidden">
+          <div class="border border-blue-100 p-8 rounded-lg mt-4 relative">
+            <div class="flex flex-row gap-2 flex-wrap leading-6">
+              <div class="w-2/5 flex-wrap">
+                <div class="w-96 h-14 flex items-center justify-center bg-sky-500 rounded-lg text-slate-50 shadow-lg">01</div>
+              </div>
+              <div class="w-2/5 flex-wrap">
+                <div class="w-96 h-14 flex items-center justify-center bg-sky-500 rounded-lg text-slate-50 shadow-lg">02</div>
+              </div>
+              <div class="w-2/5 flex-wrap">
+                <div class="w-96 h-14 flex items-center justify-center bg-sky-500 rounded-lg text-slate-50 shadow-lg">03</div>
+              </div>
+              <div class="w-2/5 flex-wrap">
+                <div class="w-96 h-14 flex items-center justify-center bg-sky-500 rounded-lg text-slate-50 shadow-lg">04</div>
+              </div>
+              <div class="w-2/5 flex-wrap">
+                <div class="w-96 h-14 flex items-center justify-center bg-sky-500 rounded-lg text-slate-50 shadow-lg">05</div>
+              </div>
+            </div>
+          </div>  
+        </div>
+      
+        <h3 class="mt-4 text-lg font-bold">Wrap reversed</h3>
+        <p>Use flex-wrap-reverse to wrap flex items in the reverse direction:</p>
+        <div class="relative bg-slate-50 rounded-lg overflow-hidden">
+          <div class="border border-blue-100 p-8 rounded-lg mt-4 relative">
+            <div class="flex flex-wrap-reverse gap-2 leading-6">
+              <div class="w-2/5 ">
+                <div class="w-96 h-14 flex items-center justify-center bg-emerald-800 rounded-lg text-slate-50 shadow-lg">01</div>
+              </div>
+              <div class="w-2/5 flex-wrap">
+                <div class="w-96 h-14 flex items-center justify-center bg-emerald-800 rounded-lg text-slate-50 shadow-lg">02</div>
+              </div>
+              <div class="w-2/5 flex-wrap">
+                <div class="w-96 h-14 flex items-center justify-center bg-emerald-800 rounded-lg text-slate-50 shadow-lg">03</div>
+              </div>
+              <div class="w-2/5 flex-wrap">
+                <div class="w-96 h-14 flex items-center justify-center bg-emerald-800 rounded-lg text-slate-50 shadow-lg">04</div>
+              </div>
+              <div class="w-2/5 flex-wrap">
+                <div class="w-96 h-14 flex items-center justify-center bg-emerald-800 rounded-lg text-slate-50 shadow-lg">05</div>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+
+        <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+        <code>
+          &lt;div class=&quot;flex flex-wrap hover:flex-wrap-reverse&quot;&gt;
+            &lt;!-- ... --&gt;
+          &lt;/div&gt;
+        </code>
+
+        <h3 class="mt-4 text-lg font-bold">Breakpoints and media queries</h3>
+        <code>
+          &lt;div class=&quot;flex flex-wrap md:flex-wrap-reverse&quot;&gt;
+            &lt;!-- ... --&gt;
+          &lt;/div&gt;
+        </code>
+      </section>
       <!-- <section class="mt-8">
         <h2 class="text-2xl font-bold">TTT</h2>
         <p>TTTT</p>
         <h4 class="mt-6 text-blue-400 font-bold">TTTe</h4>
         <h3 class="mt-4 text-lg font-bold">TTT</h3>
-         <p>TTTT</p>
+        <p>TTTT</p>
       </section> -->
 
     </div>
