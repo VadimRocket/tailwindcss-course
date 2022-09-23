@@ -482,7 +482,7 @@
 
         <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
         <p>For example, use hover:grow-0 to only apply the grow-0 utility on hover.</p>
-        <pre>
+        <pre class='overflow-auto'>
           <code>
             &lt;div class=&quot;grow hover:grow-0&quot;&gt;
               &lt;!-- ... --&gt;
@@ -547,13 +547,105 @@
           &lt;/div&gt;
         </code>
         </div>
-        
       </section>
+      <!-- Flex shrink -->
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Flex Shrink</h2>
+        <p>Utilities for controlling how flex items shrink.</p>
+        <div class="overflow-hidden lg:overflow-auto scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar:bg-transparent scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 scrollbar-track:!rounded dark:scrollbar-track:!bg-slate-500/[0.16] dark:scrollbar-thumb:!bg-slate-500/50"><table class="w-full text-left border-collapse"><thead><tr><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pr-2 border-b border-slate-200 dark:border-slate-400/20">Class</div></th><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pl-2 border-b border-slate-200 dark:border-slate-400/20">Properties</div></th></tr></thead><tbody class="align-baseline"><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400">shrink</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">flex-shrink: 1;
+          </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">shrink-0</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">flex-shrink: 0;
+          </td></tr></tbody></table>
+          <div class="sticky bottom-0 h-px -mt-px bg-slate-200 dark:bg-slate-400/20"></div>
+        </div>
+
+         <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+        <h3 class="mt-4 text-lg font-bold">Shrink</h3>
+        <p>Use shrink to allow a flex item to shrink if needed:</p>
+        <div class="relative rounded-xl p-8 bg-slate-100 mt-5 overflow-auto">
+          <div class="bg-sky-100">
+            <div class="flex gap-5 text-white">
+              <div class="flex-none h-14 w-14 p-4 rounded-lg bg-purple-600  flex items-center justify-center">
+                01
+              </div>
+              <div class="shrink w-64 h-14 p-4 rounded-lg flex items-center justify-center
+               bg-purple-700">
+                02 shrink 
+              </div>
+              <div class="flex-none w-14 h-14  bg-purple-600  p-4  rounded-lg flex items-center justify-center bg-500">
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg font-bold">Don't Shrink</h3>
+        <p>Use shrink-0 to prevent a flex item from shrinking:</p>
+        <p>02  Don't  shrink </p>
+        <div class="relative rounded-xl p-8 bg-slate-100 mt-5 overflow-auto">
+          <div class="bg-sky-100">
+            <div class="flex gap-5 text-white">
+              <div class="flex-1 h-14  p-4 rounded-lg bg-sky-400  flex items-center justify-center">
+                01
+              </div>
+              <div class="shrink-0 h-14 w-32 p-4 rounded-lg flex items-center justify-center
+               bg-sky-700">
+                02 
+              </div>
+              <div class="flex-1  h-14  bg-sky-400  p-4  rounded-lg flex items-center justify-center bg-500">
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+        <div class="relative rounded-xl p-2 bg-slate-100 mt-5 overflow-auto">
+          <code>
+            &lt;div class=&quot;shrink hover:shrink-0&quot;&gt;
+              &lt;!-- ... --&gt;
+            &lt;/div&gt;
+          </code>
+      </div>
+        <h3 class="mt-4 text-lg font-bold">Breakpoints and media queries</h3>
+        <div class="relative rounded-xl p-2 bg-slate-100 mt-5 overflow-auto">
+          <code>
+              &lt;div class=&quot;shrink md:shrink-0&quot;&gt;
+              &lt;!-- ... --&gt;
+            &lt;/div&gt;
+            </code>
+        </div>
+      
+        <h3 class="mt-4 text-lg font-bold">Customizing your theme</h3>
+        <p>By default, Tailwind provides two shrink utilities. You can customize these values by editing theme.flexShrink or theme.extend.flexShrink in your tailwind.config.js file.</p>
+        <pre class="relative rounded-xl p-2 bg-slate-100 mt-5 overflow-auto">
+          <code>
+            // tailwind.config.js
+            module.exports = {
+            theme: {
+              extend: {
+                 flexShrink: {
+                  '2': 2
+                }
+              }
+            }
+          }
+          </code>
+        </pre>
+        <h3 class="mt-4 text-lg font-bold">Arbitrary values</h3>
+        <div class="relative rounded-xl p-2 bg-slate-100 mt-5 overflow-auto">
+          <code>
+            &lt;div class=&quot;shrink-[2]&quot;&gt;
+            &lt;!-- ... --&gt;
+          &lt;/div&gt;
+          </code>
+      </div>
+      </section>
+
 
        <!-- <section class="mt-8">
         <h2 class="text-2xl font-bold">TTT</h2>
         <p>TTTT</p>
-         <h4 class="mt-6 text-blue-400 font-bold">TTTe</h4>
+        <h4 class="mt-6 text-blue-400 font-bold">TTTe</h4>
         <h3 class="mt-4 text-lg font-bold">TTT</h3>
         <p>TTTT</p>
       </section> -->
