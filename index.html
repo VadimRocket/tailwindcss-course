@@ -304,11 +304,141 @@
           &lt;/div&gt;
         </code>
       </section>
+      <!-- Flex -->
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Flex</h2>
+        <p>Utilities for controlling how flex items both grow and shrink.</p>
+        <table class="w-full text-left border-collapse"><thead><tr><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pr-2 border-b border-slate-200 dark:border-slate-400/20">Class</div></th><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pl-2 border-b border-slate-200 dark:border-slate-400/20">Properties</div></th></tr></thead><tbody class="align-baseline"><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400">flex-1</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">flex: 1 1 0%;
+          </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">flex-auto</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">flex: 1 1 auto;
+          </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">flex-initial</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">flex: 0 1 auto;
+          </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">flex-none</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">flex: none;
+          </td></tr></tbody>
+        </table>
+        <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+        <h3 class="mt-4 text-lg font-bold">Initial</h3>
+        <p>Use flex-initial to allow a flex item to shrink but not grow, taking into account its initial size:</p>
+        <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+          <div class="flex gap-4 bg-sky-100 text-white">
+            <div class="flex-none flex items-center justify-center  w-14 h-14 bg-sky-700  rounded">
+              01
+            </div>
+            <div class="flex-initial flex items-center justify-center w-64 h-14 bg-sky-700 rounded">
+              02
+            </div>
+            <div class="flex-initial  flex items-center justify-center w-32 h-14 bg-sky-700 rounded">
+              03
+            </div>
+          </div>
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Flex 1</h3>
+        <p>Use flex-1 to allow a flex item to grow and shrink as needed, ignoring its initial size:</p>
+         <div class="relative rounded-xl  p-8 bg-slate-100 mt-5">
+          <div class="bg-sky-100">
+            <div class="flex gap-5 text-white">
+              <div class="flex-none  h-14 w-14 p-4 rounded-lg bg-purple-500  flex items-center justify-center">
+                01
+              </div>
+              <div class="flex-1 w-64 p-4 rounded-lg flex items-center justify-center bg-purple-500">
+                02
+              </div>
+              <div class="flex-1 w-32 p-4  rounded-lg flex items-center justify-center bg-purple-500 shadow-lg">
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 class="mt-4 text-lg font-bold">Auto</h3>
+        <p>Use flex-auto to allow a flex item to grow and shrink, taking into account its initial size:</p>
+         <div class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          <div class="bg-sky-100">
+            <div class="flex gap-5 text-white">
+              <div class="flex-none  h-14 w-14 p-4 rounded-lg bg-red-500  flex items-center justify-center">
+                01
+              </div>
+              <div class="flex-auto w-64 p-4 rounded-lg flex items-center justify-center bg-red-500">
+                02
+              </div>
+              <div class="flex-auto  w-32 p-4  rounded-lg flex items-center justify-center bg-red-500">
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+
+            <h3 class="mt-4 text-lg font-bold">Flex None</h3>
+        <p>Use flex-none to prevent a flex item from growing or shrinking:</p>
+        <div class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          <div class="bg-sky-100">
+            <div class="flex gap-5 text-white">
+              <div class="flex-none  h-14 w-14 p-4 rounded-lg bg-green-600  flex items-center justify-center">
+                01
+              </div>
+              <div class="flex-none w-64 p-4 rounded-lg flex items-center justify-center bg-green-600">
+                02
+              </div>
+              <div class="flex-1  w-32 p-4  rounded-lg flex items-center justify-center bg-green-600">
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+          <p>
+          &lt;div class=&quot;flex-none hover:flex-1&quot;&gt;
+            &lt;!-- ... --&gt;
+          &lt;/div&gt;
+        </p>
+        <div class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          <div class="bg-sky-100">
+            <div class="flex gap-5 text-white">
+              <div class="flex-none hover:flex-1 w-64 p-4 rounded-lg bg-green-600  flex items-center justify-center">
+                01  hover:flex-1
+              </div>
+              <div class="flex-none hover:flex-1 w-64 p-4 rounded-lg flex items-center justify-center bg-green-600">
+                02  hover:flex-1
+              </div>
+              <div class="flex-1 w-32 p-4  rounded-lg flex items-center justify-center bg-green-600">
+                03 flex-1
+              </div>
+            </div>
+          </div>
+        </div>
+       
+
+        <h3 class="mt-4 text-lg font-bold">Breakpoints and media queries</h3>
+        <p class="relative rounded-xl p-8 bg-slate-100 mt-5">&lt;div class=&quot;flex-none md:flex-1&quot;&gt;
+          &lt;!-- ... --&gt; &lt;/div&gt;
+        </p>
+
+         <h3 class="mt-4 text-lg font-bold">Customizing your theme</h3>
+         <p>By default, Tailwind provides four flex utilities. You can customize these values by editing theme.flex or theme.extend.flex in your tailwind.config.js file.</p>
+         <pre class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          <code>
+            // tailwind.config.js
+            module.exports = {
+              theme: {
+                extend: {
+                  flex: {
+                    '2': '2 2 0%'
+                  }
+                }
+              }
+            }
+          </code>
+         </pre>
+         <h3 class="mt-4 text-lg font-bold">Arbitrary values</h3>
+        <p class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          &lt;div class=&quot;flex-[2_2_0%]&quot;&gt;
+            &lt;!-- ... --&gt;
+          &lt;/div&gt;
+        </p>
+      </section>
       <!-- <section class="mt-8">
         <h2 class="text-2xl font-bold">TTT</h2>
         <p>TTTT</p>
         <h4 class="mt-6 text-blue-400 font-bold">TTTe</h4>
-        <h3 class="mt-4 text-lg font-bold">TTT</h3>
         <p>TTTT</p>
       </section> -->
 
