@@ -370,7 +370,7 @@
         <p>Use flex-none to prevent a flex item from growing or shrinking:</p>
         <div class="relative rounded-xl p-8 bg-slate-100 mt-5">
           <div class="bg-sky-100">
-            <div class="flex gap-5 text-white">
+            <div class="flex flex-wrap gap-5 text-white">
               <div class="flex-none  h-14 w-14 p-4 rounded-lg bg-green-600  flex items-center justify-center">
                 01
               </div>
@@ -392,7 +392,7 @@
         </p>
         <div class="relative rounded-xl p-8 bg-slate-100 mt-5">
           <div class="bg-sky-100">
-            <div class="flex gap-5 text-white">
+            <div class="flex flex-wrap gap-5 text-white">
               <div class="flex-none hover:flex-1 w-64 p-4 rounded-lg bg-green-600  flex items-center justify-center">
                 01  hover:flex-1
               </div>
@@ -435,10 +435,126 @@
           &lt;/div&gt;
         </p>
       </section>
-      <!-- <section class="mt-8">
+      <!-- Flex Grow -->
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Flex Grow</h2>
+        <p>Utilities for controlling how flex items grow.</p>
+        <div class="overflow-hidden lg:overflow-auto scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar:bg-transparent scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 scrollbar-track:!rounded dark:scrollbar-track:!bg-slate-500/[0.16] dark:scrollbar-thumb:!bg-slate-500/50"><table class="w-full text-left border-collapse"><thead><tr><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pr-2 border-b border-slate-200 dark:border-slate-400/20">Class</div></th><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pl-2 border-b border-slate-200 dark:border-slate-400/20">Properties</div></th></tr></thead><tbody class="align-baseline"><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400">grow</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">flex-grow: 1;
+          </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">grow-0</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">flex-grow: 0;
+          </td></tr></tbody></table><div class="sticky bottom-0 h-px -mt-px bg-slate-200 dark:bg-slate-400/20"></div>
+        </div>
+        <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+        <h3 class="mt-4 text-lg font-bold">Grow</h3>
+        <p>Use grow to allow a flex item to grow to fill any available space:</p>
+        <div class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          <div class="bg-sky-100">
+            <div class="flex gap-5 text-white">
+              <div class="flex-none  h-14 w-14 p-4 rounded-lg bg-sky-600  flex items-center justify-center">
+                01
+              </div>
+              <div class="grow h-14 p-4 rounded-lg flex items-center justify-center bg-sky-600">
+                02
+              </div>
+              <div class="flex-none w-14 h-14 p-4  rounded-lg flex items-center justify-center bg-sky-600">
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg font-bold">Don't grow</h3>
+        <p>Use grow-0 to prevent a flex item from growing:</p>
+        <div class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          <div class="bg-sky-100">
+            <div class="flex gap-5 text-white">
+              <div class="grow h-14 w-14 p-4 rounded-lg bg-green-400  flex items-center justify-center">
+                01
+              </div>
+              <div class="grow-0 h-14 p-4 rounded-lg flex items-center justify-center bg-green-600">
+                02
+              </div>
+              <div class="grow  w-14 h-14 p-4  rounded-lg flex items-center justify-center bg-green-400">
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+        <p>For example, use hover:grow-0 to only apply the grow-0 utility on hover.</p>
+        <pre>
+          <code>
+            &lt;div class=&quot;grow hover:grow-0&quot;&gt;
+              &lt;!-- ... --&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+        <div class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          <div class="bg-sky-100">
+            <div class="flex gap-5 text-white">
+              <div class="grow h-14 w-14 p-4 rounded-lg bg-red-400  flex items-center justify-center">
+                01
+              </div>
+              <div class="grow cursor-pointer hover:grow-0 h-14 p-4 rounded-lg flex items-center justify-center bg-red-600">
+                02 hover:grow-0
+              </div>
+              <div class="grow  w-14 h-14 p-4  rounded-lg flex items-center justify-center bg-red-400">
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Breakpoints and media queries</h3>
+        <p>For example, use md:grow-0 to apply the grow-0 utility at only medium screen sizes and above.</p>
+        <div class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          <div class="bg-sky-100">
+            <div class="flex gap-5 text-white">
+              <div class="grow h-14 w-14 p-4 rounded-lg bg-gray-500  flex items-center justify-center">
+                01
+              </div>
+              <div class="grow md:grow-0 cursor-pointer h-14 p-4 rounded-lg flex items-center justify-center
+               bg-gray-600">
+                02 grow md:grow-0
+              </div>
+              <div class="grow bg-gray-500 w-14 h-14 p-4  rounded-lg flex items-center justify-center bg-500">
+                03
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Customizing your theme</h3>
+        <pre class="relative rounded-xl p-2 bg-slate-100 mt-5">
+          <code >
+            // tailwind.config.js
+            module.exports = {
+            theme: {
+              extend: {
+                 flexGrow: {
+                  '2': 2
+                }
+              }
+            }
+          }
+          </code>
+        </pre>
+
+        <h3 class="mt-4 text-lg font-bold">Arbitrary values</h3>
+        <p>If you need to use a one-off flex-grow value that doesn’t make sense to include in your theme, use square brackets to generate a property on the fly using any arbitrary value.</p>
+        <div class="relative rounded-xl p-2 bg-slate-100 mt-5">
+          <code>
+          &lt;div class=&quot;grow-[2]&quot;&gt;
+            &lt;!-- ... --&gt;
+          &lt;/div&gt;
+        </code>
+        </div>
+        
+      </section>
+
+       <!-- <section class="mt-8">
         <h2 class="text-2xl font-bold">TTT</h2>
         <p>TTTT</p>
-        <h4 class="mt-6 text-blue-400 font-bold">TTTe</h4>
+         <h4 class="mt-6 text-blue-400 font-bold">TTTe</h4>
+        <h3 class="mt-4 text-lg font-bold">TTT</h3>
         <p>TTTT</p>
       </section> -->
 
