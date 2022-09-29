@@ -2874,6 +2874,835 @@
           &lt;/div&gt;
         </code></pre>
       </section>
+      <section class="mt-8">
+        <header>
+          <h2 class="text-2xl font-bold">Grid Column Start / End</h2>
+          <p>
+            Utilities for controlling how elements are sized and placed across
+            grid columns.
+          </p>
+        </header>
+
+        <div class="mt-4 relative">
+          <h2
+            class="group flex whitespace-pre-wrap relative scroll-mt-[var(--scroll-mt)] -ml-4 pl-4"
+            id="class-reference"
+          >
+            <a
+              href="#class-reference"
+              class="absolute -ml-10 flex items-center opacity-0 border-0 group-hover:opacity-100"
+              aria-label="Anchor"
+              >&ZeroWidthSpace;
+              <div
+                class="w-6 h-6 text-slate-400 ring-1 ring-slate-900/5 rounded-md shadow-sm flex items-center justify-center hover:ring-slate-900/10 hover:shadow hover:text-slate-700 dark:bg-slate-700 dark:text-slate-300 dark:shadow-none dark:ring-0"
+              >
+                <svg width="12" height="12" fill="none" aria-hidden="true">
+                  <path
+                    d="M3.75 1v10M8.25 1v10M1 3.75h10M1 8.25h10"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  ></path>
+                </svg></div></a
+            ><span><span class="sr-only">Quick reference</span></span>
+          </h2>
+          <div
+            class="overflow-hidden lg:overflow-auto scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar:bg-transparent scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 scrollbar-track:!rounded dark:scrollbar-track:!bg-slate-500/[0.16] dark:scrollbar-thumb:!bg-slate-500/50 max-h-96 supports-scrollbars:pr-2 lg:max-h-96"
+          >
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr>
+                  <th
+                    class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"
+                  >
+                    <div
+                      class="py-2 pr-2 border-b border-slate-200 dark:border-slate-400/20"
+                    >
+                      Class
+                    </div>
+                  </th>
+                  <th
+                    class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"
+                  >
+                    <div
+                      class="py-2 pl-2 border-b border-slate-200 dark:border-slate-400/20"
+                    >
+                      Properties
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="align-baseline">
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400"
+                  >
+                    col-auto
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300"
+                  >
+                    grid-column: auto;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-1
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 1 / span 1;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-2
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 2 / span 2;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-3
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 3 / span 3;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-4
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 4 / span 4;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-5
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 5 / span 5;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-6
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 6 / span 6;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-7
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 7 / span 7;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-8
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 8 / span 8;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-9
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 9 / span 9;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-10
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 10 / span 10;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-11
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 11 / span 11;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-12
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: span 12 / span 12;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-span-full
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column: 1 / -1;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-1
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 1;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-2
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 2;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-3
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 3;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-4
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 4;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-5
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 5;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-6
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 6;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-7
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 7;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-8
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 8;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-9
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 9;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-10
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 10;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-11
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 11;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-12
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 12;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-13
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: 13;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-start-auto
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-start: auto;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-1
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 1;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-2
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 2;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-3
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 3;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-4
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 4;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-5
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 5;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-6
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 6;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-7
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 7;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-8
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 8;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-9
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 9;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-10
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 10;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-11
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 11;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-12
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 12;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-13
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: 13;
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    translate="no"
+                    class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    col-end-auto
+                  </td>
+                  <td
+                    translate="no"
+                    class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+                  >
+                    grid-column-end: auto;
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div
+              class="sticky bottom-0 h-px -mt-px bg-slate-200 dark:bg-slate-400/20"
+            ></div>
+          </div>
+          <div class="inset-x-0 flex justify-center lg:hidden -mt-9 relative">
+            <div
+              class="absolute inset-x-0 bg-gradient-to-t from-white dark:from-slate-900 -top-8 bottom-0"
+            ></div>
+            <button
+              type="button"
+              class="relative text-sm font-semibold text-slate-900 bg-white py-2 px-4 rounded-full ring-1 ring-slate-900/10 shadow-sm dark:bg-slate-800 dark:text-slate-200 dark:highlight-white/5"
+            >
+              Show all classes
+            </button>
+          </div>
+        </div>
+
+        <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+        <h3 class="mt-4 text-lg font-bold">Spanning columns</h3>
+        <p>Use the col-span-{n} utilities to make an element span n columns</p>
+        <div class="relative rounded-xl overflow-auto p-8">
+          <div class="grid grid-cols-3 gap-4 text-white text-center leading-6">
+            <div class="p-4 rounded-lg bg-indigo-300">01</div>
+            <div class="p-4 rounded-lg bg-indigo-300">02</div>
+            <div class="p-4 rounded-lg bg-indigo-300">03</div>
+            <div class="p-4 rounded-lg col-span-2 shadow-lg bg-indigo-600">
+              04
+            </div>
+            <div class="p-4 rounded-lg bg-indigo-300">05</div>
+            <div class="p-4 rounded-lg col-span-2 bg-indigo-600">06</div>
+            <div class="p-4 rounded-lg bg-indigo-300">07</div>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg font-bold">Starting and ending lines</h3>
+        <p>
+          Use the col-start-{n} and col-end-{n} utilities to make an element
+          start or end at the nth grid line. These can also be combined with the
+          col-span-{n} utilities to span a specific number of columns.
+        </p>
+        <p>
+          Note that CSS grid lines start at 1, not 0, so a full-width element in
+          a 6-column grid would start at line 1 and end at line 7.
+        </p>
+        <div class="relative rounded-xl overflow-auto p-8">
+          <div class="grid grid-cols-6 gap-4 text-white text-center leading-6">
+            <div class="col-start-2 col-span-4 p-4 rounded-lg bg-sky-600">
+              01
+            </div>
+            <div class="col-start-1 col-end-3 p-4 rounded-lg bg-sky-600">
+              02
+            </div>
+            <div class="col-end-7 col-span-2 p-4 rounded-lg bg-sky-600">03</div>
+            <div
+              class="col-start-1 col-end-7 p-4 rounded-lg shadow-lg bg-sky-600"
+            >
+              04
+            </div>
+          </div>
+        </div>
+        <h4>Example 2</h4>
+        <div class="relative rounded-xl overflow-auto p-2">
+          <div class="grid grid-cols-6 gap-2 text-white text-center leading-6">
+            <div class="col-start-1 p-4 rounded-lg bg-sky-400">01</div>
+            <div class="col-start-2 col-end-7 p-4 rounded-lg bg-indigo-600">
+              02
+            </div>
+            <div class="col-start-1 p-4 rounded-lg bg-sky-400">03</div>
+            <div
+              class="col-start-2 col-end-7 p-4 rounded-lg shadow-lg bg-indigo-600"
+            >
+              04
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+        <p>
+          &lt;div class=&quot;col-span-2 hover:col-span-6&quot;&gt; &lt;!-- ...
+          --&gt; &lt;/div&gt;
+        </p>
+        <div class="relative rounded-xl overflow-auto p-2">
+          <div class="grid grid-cols-6 gap-2 text-white text-center leading-6">
+            <div
+              class="col-span-2 hover:col-span-6 p-4 rounded-lg bg-green-600"
+            >
+              01
+            </div>
+            <div
+              class="col-start-2 hover:col-span-6 col-end-7 p-4 rounded-lg bg-green-600"
+            >
+              02
+            </div>
+            <div
+              class="col-start-1 hover:col-span-6 p-4 rounded-lg bg-green-600"
+            >
+              03
+            </div>
+            <div
+              class="col-start-2 col-end-7 p-4 rounded-lg shadow-lg bg-indigo-600"
+            >
+              04
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg font-bold">Breakpoints and media queries</h3>
+        <p>
+          &lt;div class=&quot;col-span-6 md:col-span-2&quot;&gt; &lt;!-- ...
+          --&gt; &lt;/div&gt;
+        </p>
+        <div class="relative rounded-xl overflow-auto p-2">
+          <div class="grid grid-cols-6 gap-2 text-white text-center leading-6">
+            <div class="col-span-6 md:col-span-2 p-4 rounded-lg bg-red-600">
+              01
+            </div>
+            <div class="col-span-6 md:col-span-2 p-4 rounded-lg bg-red-600">
+              02
+            </div>
+            <div class="col-span-6 md:col-span-2 p-4 rounded-lg bg-red-600">
+              03
+            </div>
+          </div>
+        </div>
+
+        <h3 class="mt-4 text-lg font-bold">Customizing your theme</h3>
+        <p>
+          By default, Tailwind includes grid-column utilities for working with
+          grids with up to 12 columns. You change, add, or remove these by
+          customizing the gridColumn, gridColumnStart, and gridColumnEnd
+          sections of your Tailwind theme config.
+        </p>
+        <p>
+          For creating more col-{value} utilities that control the grid-column
+          shorthand property directly, customize the gridColumn section of your
+          Tailwind theme config:
+        </p>
+        <pre class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          <code>
+            // tailwind.config.js
+            module.exports = {
+              theme: {
+                extend: {
+                  gridColumn: {
+                    'span-16': 'span 16 / span 16',
+                  },
+                  gridColumnStart: {
+                    '13': '13',
+                    '14': '14',
+                    '15': '15',
+                    '16': '16',
+                    '17': '17',
+                  },
+                  gridColumnEnd: {
+                    '13': '13',
+                    '14': '14',
+                    '15': '15',
+                    '16': '16',
+                    '17': '17',
+                  }
+                }
+              }
+            }
+          </code>
+        </pre>
+        <h3 class="mt-4 text-lg font-bold">Arbitrary values</h3>
+        <p>
+          If you need to use a one-off
+          grid-column/grid-column-start/grid-column-end value that doesn’t make
+          sense to include in your theme, use square brackets to generate a
+          property on the fly using any arbitrary value.
+        </p>
+        <pre class="relative rounded-xl p-8 bg-slate-100 mt-5">
+          <code>
+            &lt;div class=&quot;col-[16_/_span_16]&quot;&gt;
+              &lt;!-- ... --&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </section>
 
       <!-- <section class="mt-8">
         <h2 class="text-2xl font-bold">TTT</h2>
