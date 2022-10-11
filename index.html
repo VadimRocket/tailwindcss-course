@@ -3660,7 +3660,7 @@
           shorthand property directly, customize the gridColumn section of your
           Tailwind theme config:
         </p>
-        <pre class="relative rounded-xl p-8 bg-slate-100 mt-5">
+        <pre class="relative rounded-xl p-8 bg-slate-100 mt-5  overflow-x-auto lg:overflow-auto">
           <code>
             // tailwind.config.js
             module.exports = {
@@ -3695,10 +3695,400 @@
           sense to include in your theme, use square brackets to generate a
           property on the fly using any arbitrary value.
         </p>
-        <pre class="relative rounded-xl p-8 bg-slate-100 mt-5">
+        <pre class="relative rounded-xl p-8 bg-slate-100 mt-5  overflow-x-auto lg:overflow-auto">
           <code>
             &lt;div class=&quot;col-[16_/_span_16]&quot;&gt;
               &lt;!-- ... --&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </section>
+
+      <div class="mt-8">
+        <h2 class="text-2xl font-bold">Grid Template Rows</h2>
+        <p>Utilities for specifying the rows in a grid layout.</p>
+        <div class="overflow-hidden lg:overflow-auto  overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr>
+              <th
+                class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"
+              >
+                <div
+                  class="py-2 pr-2 border-b border-slate-200 dark:border-slate-400/20"
+                >
+                  Class
+                </div>
+              </th>
+              <th
+                class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"
+              >
+                <div
+                  class="py-2 pl-2 border-b border-slate-200 dark:border-slate-400/20"
+                >
+                  Properties
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="align-baseline">
+            <tr>
+              <td
+                translate="no"
+                class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400"
+              >
+                grid-rows-1
+              </td>
+              <td
+                translate="no"
+                class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300"
+              >
+                grid-template-rows: repeat(1, minmax(0, 1fr));
+              </td>
+            </tr>
+            <tr>
+              <td
+                translate="no"
+                class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-rows-2
+              </td>
+              <td
+                translate="no"
+                class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-template-rows: repeat(2, minmax(0, 1fr));
+              </td>
+            </tr>
+            <tr>
+              <td
+                translate="no"
+                class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-rows-3
+              </td>
+              <td
+                translate="no"
+                class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-template-rows: repeat(3, minmax(0, 1fr));
+              </td>
+            </tr>
+            <tr>
+              <td
+                translate="no"
+                class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-rows-4
+              </td>
+              <td
+                translate="no"
+                class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-template-rows: repeat(4, minmax(0, 1fr));
+              </td>
+            </tr>
+            <tr>
+              <td
+                translate="no"
+                class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-rows-5
+              </td>
+              <td
+                translate="no"
+                class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-template-rows: repeat(5, minmax(0, 1fr));
+              </td>
+            </tr>
+            <tr>
+              <td
+                translate="no"
+                class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-rows-6
+              </td>
+              <td
+                translate="no"
+                class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-template-rows: repeat(6, minmax(0, 1fr));
+              </td>
+            </tr>
+            <tr>
+              <td
+                translate="no"
+                class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-rows-none
+              </td>
+              <td
+                translate="no"
+                class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10"
+              >
+                grid-template-rows: none;
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+        <h3 class="mt-4 text-lg font-bold">Specifying the rows in a grid</h3>
+        <p>
+          Use the grid-rows-{n} utilities to create grids with n equally sized
+          rows.
+        </p>
+        <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+          <code>
+             &lt;div class=&quot;grid grid-rows-4 grid-flow-col gap-4&quot;&gt;
+                &lt;div&gt;01&lt;/div&gt; &lt;!-- ... --&gt; 
+                &lt;div&gt;09&lt;/div&gt;
+              &lt;/div&gt;
+          </code>
+        </pre>
+        <div
+          class="relative rounded-xl p-4 bg-slate-100 mt-5 overflow-auto text-white text-center"
+        >
+          <div class="grid grid-rows-4 grid-flow-col gap-4">
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">01</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">02</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">03</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">04</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">05</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">06</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">07</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">08</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">09</div>
+          </div>
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Example 2 </h3>
+         <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+          <code>
+             &lt;div class=&quot;grid grid-rows-2 grid-flow-col gap-4&quot;&gt;
+                &lt;div&gt;01&lt;/div&gt; 
+                  &lt;!-- ... --&gt; 
+                &lt;div&gt;10&lt;/div&gt;
+              &lt;/div&gt;
+          </code>
+        </pre>
+         <div
+          class="relative rounded-xl p-4 bg-slate-100 mt-5 overflow-auto text-white text-center"
+        >
+          <div class="grid grid-rows-2 grid-flow-col gap-4">
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">01</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">02</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">03</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">04</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">05</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">06</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">07</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">08</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">09</div>
+            <div class="p-4 rounded-lg shadow-lg bg-pink-500">10</div>
+          </div>
+        </div>
+        <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+        <p>grid-rows-2 hover:grid-rows-6</p>
+          <div class="relative rounded-xl p-4 bg-slate-100 mt-5 overflow-auto text-white text-center">
+            <div class="grid grid-rows-2 hover:grid-rows-6  grid-flow-col gap-4">
+              <div class="p-4 rounded-lg shadow-lg bg-sky-500">01</div>
+              <div class="p-4 rounded-lg shadow-lg bg-sky-500">02</div>
+              <div class="p-4 rounded-lg shadow-lg bg-sky-500">03</div>
+              <div class="p-4 rounded-lg shadow-lg bg-sky-500">04</div>
+              <div class="p-4 rounded-lg shadow-lg bg-sky-500">05</div>
+              <div class="p-4 rounded-lg shadow-lg bg-sky-500">06</div>
+              <div class="p-4 rounded-lg shadow-lg bg-sky-500">07</div>
+              <div class="p-4 rounded-lg shadow-lg bg-sky-500">08</div>
+              <div class="p-4 rounded-lg shadow-lg bg-sky-500">09</div>
+              <div class="p-4 rounded-lg shadow-lg bg-sky-500">10</div>
+            </div>
+          </div>
+        <h3 class="mt-4 text-lg font-bold">Breakpoints and media queries</h3>
+        <p>For example, use md:grid-rows-6 to apply the grid-rows-6 utility at only medium screen sizes and above.</p>
+        <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+          <code>
+            &lt;div class=&quot;grid grid-rows-2 md:grid-rows-6&quot;&gt; &lt;!-- ... --&gt; &lt;/div&gt;
+          </code>
+        </pre>
+         <div class="relative rounded-xl p-4 bg-slate-100 mt-5 overflow-auto text-white text-center">
+            <div class="grid grid-rows-2 md:grid-rows-6  grid-flow-col gap-4">
+              <div class="p-4 rounded-lg shadow-lg bg-green-600">01</div>
+              <div class="p-4 rounded-lg shadow-lg bg-green-600">02</div>
+              <div class="p-4 rounded-lg shadow-lg bg-green-600">03</div>
+              <div class="p-4 rounded-lg shadow-lg bg-green-600">04</div>
+              <div class="p-4 rounded-lg shadow-lg bg-green-600">05</div>
+              <div class="p-4 rounded-lg shadow-lg bg-green-600">06</div>
+              <div class="p-4 rounded-lg shadow-lg bg-green-600">07</div>
+              <div class="p-4 rounded-lg shadow-lg bg-green-600">08</div>
+              <div class="p-4 rounded-lg shadow-lg bg-green-600">09</div>
+              <div class="p-4 rounded-lg shadow-lg bg-green-600">10</div>
+            </div>
+          </div>
+        <h3 class="mt-4 text-lg font-bold">Customizing your theme</h3>
+        <p>By default, Tailwind includes grid-template-row utilities for creating basic grids with up to 6 equal width rows. </p>
+        <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+          <code>
+            // tailwind.config.js
+            module.exports = { 
+              theme: { 
+                extend: { 
+                  gridTemplateRows: {
+                     // Simple 8 row grid 
+                     '8': 'repeat(8, minmax(0, 1fr))', 
+                     // Complex site-specific row configuration 
+                     'layout': '200px minmax(900px, 1fr) 100px',
+                  } 
+                } 
+              } 
+            }
+          </code>
+        </pre>
+        <h3 class="mt-4 text-lg font-bold">Arbitrary values</h3>
+        <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+          <code>
+            &lt;div class=&quot;grid grid-rows-[200px_minmax(900px,_1fr)_100px]&quot;&gt; 
+              &lt;!-- ... --&gt;
+            &lt;/div&gt;
+          </code>
+        </pre>
+      </section>
+
+      <section class="mt-8">
+        <h2 class="text-2xl font-bold">Grid Row Start / End</h2>
+        <p>Utilities for controlling how elements are sized and placed across grid rows.</p>
+      <div class="overflow-hidden lg:overflow-auto scrollbar:!w-1.5 scrollbar:!h-1.5 scrollbar:bg-transparent scrollbar-track:!bg-slate-100 scrollbar-thumb:!rounded scrollbar-thumb:!bg-slate-300 scrollbar-track:!rounded dark:scrollbar-track:!bg-slate-500/[0.16] dark:scrollbar-thumb:!bg-slate-500/50 max-h-96 supports-scrollbars:pr-2 lg:max-h-96"><table class="w-full text-left border-collapse"><thead><tr><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pr-2 border-b border-slate-200 dark:border-slate-400/20">Class</div></th><th class="sticky z-10 top-0 text-sm leading-6 font-semibold text-slate-700 bg-white p-0 dark:bg-slate-900 dark:text-slate-300"><div class="py-2 pl-2 border-b border-slate-200 dark:border-slate-400/20">Properties</div></th></tr></thead><tbody class="align-baseline"><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400">row-auto</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300">grid-row: auto;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-span-1</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row: span 1 / span 1;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-span-2</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row: span 2 / span 2;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-span-3</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row: span 3 / span 3;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-span-4</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row: span 4 / span 4;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-span-5</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row: span 5 / span 5;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-span-6</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row: span 6 / span 6;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-span-full</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row: 1 / -1;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-start-1</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-start: 1;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-start-2</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-start: 2;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-start-3</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-start: 3;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-start-4</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-start: 4;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-start-5</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-start: 5;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-start-6</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-start: 6;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-start-7</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-start: 7;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-start-auto</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-start: auto;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-end-1</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-end: 1;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-end-2</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-end: 2;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-end-3</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-end: 3;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-end-4</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-end: 4;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-end-5</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-end: 5;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-end-6</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-end: 6;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-end-7</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-end: 7;
+        </td></tr><tr><td translate="no" class="py-2 pr-2 font-mono font-medium text-xs leading-6 text-sky-500 whitespace-nowrap dark:text-sky-400 border-t border-slate-100 dark:border-slate-400/10">row-end-auto</td><td translate="no" class="py-2 pl-2 font-mono text-xs leading-6 text-indigo-600 whitespace-pre dark:text-indigo-300 border-t border-slate-100 dark:border-slate-400/10">grid-row-end: auto;
+        </td></tr></tbody></table><div class="sticky bottom-0 h-px -mt-px bg-slate-200 dark:bg-slate-400/20"></div></div>  
+
+        <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+        <h3 class="mt-4 text-lg font-bold">Spanning rows</h3>
+        <p>Use the row-span-{n} utilities to make an element span n rows.</p>
+         <div class="relative rounded-xl p-4 bg-slate-100 mt-5 overflow-auto text-white font-bold">
+            <div class="grid grid-rows-3 grid-flow-col gap-4">
+              <div class="row-span-3 grid place-content-center p-4 rounded-lg shadow-lg bg-pink-600">01</div>
+              <div class="col-span-2 grid place-content-center p-4 rounded-lg shadow-lg bg-pink-600">02</div>
+              <div class="row-span-2 grid place-content-center p-4 rounded-lg shadow-lg bg-pink-600">03</div>
+            </div>
+          </div>
+        <h3 class="mt-4 text-lg font-bold">Starting and ending lines</h3>
+        <p>Use the <strong>row-start-{n}</strong> and <strong>row-end-{n}</strong> utilities to make an element start or end at the nth grid line. These can also be combined with the <strong>row-span-{n}</strong> utilities to span a specific number of rows.</p>
+        <p>Note that CSS grid lines start at 1, not 0, so a full-height element in a 3-row grid would start at line 1 and end at line 4.</p>
+    
+        <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+          <div class="grid grid-rows-3 grid-flow-col gap-4 font-mono text-white text-sm text-center font-bold leading-6 rounded-lg">
+            <div class="p-4 sm:p-12 rounded-lg shadow-lg bg-blue-500 grid place-content-center row-start-2 row-span-2">01</div>
+            <div class="p-4 sm:p-12 rounded-lg shadow-lg bg-blue-500 grid place-content-center row-end-3 row-span-2">02</div>
+            <div class="p-4 sm:p-12 rounded-lg shadow-lg bg-blue-500 grid place-content-center row-start-1 row-end-4">03</div>
+          </div>
+        </div>  
+        <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+        <p>row-span-2 hover:row-span-3</p>
+        <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+          <div class="grid grid-rows-3 grid-flow-col gap-4 font-mono text-white text-sm text-center font-bold leading-6  rounded-lg">
+            <div class="row-start-1 row-span-2 hover:row-span-3 p-4 sm:p-12 rounded-lg shadow-lg bg-green-600 grid place-content-center">01</div>
+            <div class="row-end-3 row-span-2 hover:row-span-3  p-4 sm:p-12 rounded-lg shadow-lg bg-green-600 grid place-content-center">02</div>
+            <div class="row-start-1 row-end-4 p-4 sm:p-12 rounded-lg shadow-lg bg-blue-500 grid place-content-center">03</div>
+          </div>
+        </div>  
+        <h3 class="mt-4 text-lg font-bold">Breakpoints and media queries</h3>
+        <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+          <code>
+            &lt;div class=&quot;row-span-2 md:row-span-4&quot;&gt;
+               &lt;!-- ... --&gt; 
+            &lt;/div&gt;
+          </code>
+        </pre>
+        <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+          <div class="grid grid-rows-3 grid-flow-col gap-4 font-mono text-white text-sm text-center font-bold leading-6  rounded-lg">
+            <div class="row-start-1 row-span-2 md:row-span-4 p-4 sm:p-12 rounded-lg shadow-lg bg-pink-600 grid place-content-center">01</div>
+            <div class="row-end-3 row-span-2  p-4 sm:p-12 rounded-lg shadow-lg bg-blue-600 grid place-content-center">02</div>
+            <div class="row-start-1 row-end-4 p-4 sm:p-12 rounded-lg shadow-lg bg-blue-500 grid place-content-center">03</div>
+          </div>
+        </div>
+       
+        <h3 class="mt-4 text-lg font-bold">Customizing your theme</h3>
+        <p>Open tailwind.config.js</p>
+        <p class="my-4">For creating more row-{value} utilities that control the grid-row shorthand property directly, customize the gridRow section of your Tailwind theme config:</p>
+         <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+          <code>
+            module.exports = {
+              theme: {
+                extend: {
+                  gridRow: {
+                    'span-16': 'span 16 / span 16',
+                  }
+                }
+              }
+            }
+          </code>
+        </pre>
+        <p class="my-4">To add new row-start-{n} utilities, use the gridRowStart section of your Tailwind theme config:</p>
+         <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+          <code>
+            module.exports = {
+              theme: {
+                extend: {
+                  gridRowStart: {
+                    '8': '8',
+                    '9': '9',
+                    '10': '10',
+                    '11': '11',
+                    '12': '12',
+                    '13': '13',
+                  }
+                }
+              }
+            }
+          </code>
+        </pre>
+        <p class="my-4">To add new row-end-{n} utilities, use the gridRowEnd section of your Tailwind theme config:</p>
+         <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+          <code>
+              module.exports = {
+                theme: {
+                  extend: {
+                    gridRowEnd: {
+                      '8': '8',
+                      '9': '9',
+                      '10': '10',
+                      '11': '11',
+                      '12': '12',
+                      '13': '13',
+                    }
+                  }
+                }
+              }
+          </code>
+        </pre>
+       
+        <h3 class="mt-4 text-lg font-bold">Arbitrary values</h3>
+          <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+          <code>
+            &lt;div class=&quot;row-[span_16_/_span_16]&quot;&gt; 
+               &lt;!-- ... --&gt; 
             &lt;/div&gt;
           </code>
         </pre>
