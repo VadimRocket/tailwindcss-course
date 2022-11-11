@@ -40,6 +40,15 @@
               </li>
               <li>
                 <a
+                  href="#align_content"
+                  class="flex items-center p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-gray-800"
+                >
+                  <span class="flex-1 ml-3 whitespace-nowrap">Align Content</span>
+                </a>
+              </li>
+
+              <li>
+                <a
                   href="#examples"
                   class="flex items-center p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-gray-800"
                 >
@@ -6491,13 +6500,172 @@
               </p>
 
               <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
-                    <code>
-                        &lt;div class=&quot;justify-self-start hover:justify-self-end&quot;&gt;
-                          &lt;!-- ... --&gt; 
-                        &lt;/div&gt;
-                    </code>
-                  </pre>
+                  <code>
+                      &lt;div class=&quot;justify-self-start hover:justify-self-end&quot;&gt;
+                        &lt;!-- ... --&gt; 
+                      &lt;/div&gt;
+                  </code>
+              </pre>
             </section>
+            <!-- Justify Self -->
+            <section id="align_content" class="mt-16">
+              <header>
+                <h2 class="text-2xl font-bold">Align Content</h2>
+                <p>Utilities for controlling how rows are positioned in multi-row flex and grid containers.</p>
+              </header>
+              <div class="overflow-auto mt-5">
+                <table class="w-full text-sm text-left table-auto bg-teal-500 shadow-lg">
+                  <thead class="text-lg">
+                    <tr>
+                      <th class="p-4">Class</th>
+                      <th class="p-4">Properties</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr class="bg-white border-b">
+                      <td class="p-4 text-sky-500 font-medium">content-center</td>
+                      <td class="p-4">align-content: center;</td>
+                    </tr>
+                    <tr class="bg-white border-b">
+                      <td class="p-4 text-sky-500 font-medium">content-start</td>
+                      <td class="p-4">align-content: flex-start;</td>
+                    </tr>
+                    <tr class="bg-white border-b">
+                      <td class="p-4 text-sky-500 font-medium">content-end</td>
+                      <td class="p-4">align-content: flex-end;</td>
+                    </tr>
+                    <tr class="bg-white border-b">
+                      <td class="p-4 text-sky-500 font-medium">content-between</td>
+                      <td class="p-4">align-content: space-between;</td>
+                    </tr>
+                    <tr class="bg-white border-b">
+                      <td class="p-4 text-sky-500 font-medium">content-around</td>
+                      <td class="p-4">align-content: space-around;</td>
+                    </tr>
+                    <tr class="bg-white border-b">
+                      <td class="p-4 text-sky-500 font-medium">content-evenly</td>
+                      <td class="p-4">align-content: space-evenly;</td>
+                    </tr>
+                    <tr class="bg-white border-b">
+                      <td class="p-4 text-sky-500 font-medium">content-baseline</td>
+                      <td class="p-4">align-content: baseline;</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+              <h3 class="mt-4 text-lg font-bold">Start</h3>
+              <p>Use content-start to pack rows in a container against the start of the cross axis:</p>
+              <pre class="relative rounded-xl p-8 xs:p-1 bg-slate-100 mt-5 overflow-x-auto lg:overflow-auto">
+                <code>
+                  &lt;div class=&quot;h-56 grid grid-cols-3 gap-4 content-{optional}&quot;&gt;
+                      &lt;div&gt;01&lt;/div&gt;
+                      &lt;div&gt;02&lt;/div&gt;
+                      &lt;div&gt;03&lt;/div&gt;
+                  &lt;/div&gt;
+                </code>
+              </pre>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 content-start w-full rounded-lg bg-black text-center h-56">
+                    <div class="p-4 shadow-lg rounded-lg bg-violet-500">01</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-violet-500">02</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-violet-500">03</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-violet-500">04</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-violet-500">05</div>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="mt-4 text-lg font-bold">Center</h3>
+              <p>Use content-center to pack rows in a container in the center of the cross axis:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 content-center w-full rounded-lg bg-black text-center h-56">
+                    <div class="p-4 shadow-lg rounded-lg bg-green-500">01</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-green-500">02</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-green-500">03</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-green-500">04</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-green-500">05</div>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="mt-4 text-lg font-bold">End</h3>
+              <p>Use content-end to pack rows in a container against the end of the cross axis:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 content-end w-full rounded-lg bg-black text-center h-56">
+                    <div class="p-4 shadow-lg rounded-lg bg-sky-500">01</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-sky-500">02</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-sky-500">03</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-sky-500">04</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-sky-500">05</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Space between</h3>
+              <p>
+                Use content-between to distribute rows in a container such that there is an equal amount of space
+                between each line:
+              </p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 content-between w-full rounded-lg bg-black text-center h-56">
+                    <div class="p-4 shadow-lg rounded-lg bg-purple-500">01</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-purple-500">02</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-purple-500">03</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-purple-500">04</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-purple-500">05</div>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="mt-4 text-lg font-bold">Space around</h3>
+              <p>
+                Use content-around to distribute rows in a container such that there is an equal amount of space around
+                each line:
+              </p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 content-around w-full rounded-lg bg-black text-center h-56">
+                    <div class="p-4 shadow-lg rounded-lg bg-indigo-500">01</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-indigo-500">02</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-indigo-500">03</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-indigo-500">04</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-indigo-500">05</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Space evenly</h3>
+              <p>
+                Use content-evenly to distribute rows in a container such that there is an equal amount of space around
+                each item, but also accounting for the doubling of space you would normally see between each item when
+                using content-around:
+              </p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 content-evenly w-full rounded-lg bg-black text-center h-56">
+                    <div class="p-4 shadow-lg rounded-lg bg-rose-500">01</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-rose-500">02</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-rose-500">03</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-rose-500">04</div>
+                    <div class="p-4 shadow-lg rounded-lg bg-rose-500">05</div>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+              <p>use hover:content-around to only apply the content-around utility on hover.</p>
+              <h3 class="mt-4 text-lg font-bold">Breakpoints and media queries</h3>
+              <p>
+                For example, use md:content-around to apply the content-around utility at only medium screen sizes and
+                above.
+              </p>
+            </section>
+
             <!-- Examples -->
             <section id="examples" class="my-16">
               <h2 class="text-[37px] font-bold">Examples</h2>
