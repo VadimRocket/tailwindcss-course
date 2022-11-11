@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./index.html"],
+  content: ['./index.html'],
   theme: {
     container: {
       center: true,
@@ -18,8 +18,8 @@ module.exports = {
       // columns
       columns: {
         '4xs': '14rem',
-      }
+      },
     },
   },
   plugins: [],
-}
+};

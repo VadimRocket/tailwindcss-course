@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 
+
+.my-class {
+    @apply bg-gray-500 text-white py-4 px-4 text-4xl text-center
+}
