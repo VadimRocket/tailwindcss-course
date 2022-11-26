@@ -62,6 +62,14 @@
                   <span class="flex-1 ml-3 whitespace-nowrap">Align Self</span>
                 </a>
               </li>
+              <li>
+                <a
+                  href="#place_content"
+                  class="flex items-center p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-gray-800"
+                >
+                  <span class="flex-1 ml-3 whitespace-nowrap">Place Content</span>
+                </a>
+              </li>
 
               <li>
                 <a
@@ -6953,6 +6961,175 @@
               </div>
               <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
               <p>For example, use hover:self-end to only apply the self-end utility on hover.</p>
+            </section>
+            <!-- Place Content -->
+            <section class="mt-16" id="place_content">
+              <h2 class="text-2xl font-bold">Place Content</h2>
+              <p>Utilities for controlling how content is justified and aligned at the same time.</p>
+              <table class="w-full text-sm text-left table-auto bg-teal-500 mt-4">
+                <thead class="text-lg">
+                  <tr>
+                    <th class="p-4">Class</th>
+                    <th class="p-4">Properties</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-content-center</td>
+                    <td class="p-4">place-content: center;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-content-start</td>
+                    <td class="p-4">place-content: start;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-content-end</td>
+                    <td class="p-4">place-content: end;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-content-between</td>
+                    <td class="p-4">place-content: space-between;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-content-around</td>
+                    <td class="p-4">place-content: space-around;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-content-evenly</td>
+                    <td class="p-4">place-content: space-evenly;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-content-baseline</td>
+                    <td class="p-4">place-content: baseline;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-content-center</td>
+                    <td class="p-4">place-content: center;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-content-stretch</td>
+                    <td class="p-4">place-content: stretch;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+              <h3 class="mt-4 text-lg font-bold">Center</h3>
+              <p>Use place-content-center to pack items in the center of the block axis:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6 bg-black rounded-lg">
+                  <div class="grid grid-cols-[repeat(2,56px)] place-content-center h-56 gap-4">
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">01</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">02</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">03</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">04</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Start</h3>
+              <p>Use place-content-start to pack items against the start of the block axis:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6 bg-black rounded-lg">
+                  <div class="grid grid-cols-[repeat(2,56px)] place-content-start h-56 gap-4">
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">01</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">02</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">03</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">04</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">End</h3>
+              <p>Use place-content-end to to pack items against the end of the block axis:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6 bg-black rounded-lg">
+                  <div class="grid grid-cols-[repeat(2,56px)] place-content-end h-56 gap-4">
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">01</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">02</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">03</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">04</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Space between</h3>
+              <p>
+                Use place-content-between to distribute grid items along the block axis so that that there is an equal
+                amount of space between each row on the block axis.
+              </p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6 bg-black rounded-lg">
+                  <div class="grid grid-cols-[repeat(2,56px)] place-content-between h-56 gap-4">
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">01</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">02</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">03</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">04</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Space around</h3>
+              <p>
+                Use place-content-around distribute grid items such that there is an equal amount of space around each
+                row on the block axis:
+              </p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6 bg-black rounded-lg">
+                  <div class="grid grid-cols-[repeat(2,56px)] place-content-around h-56 gap-4">
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">01</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">02</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">03</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">04</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Space evenly</h3>
+              <p>
+                Use place-content-evenly to distribute grid items such that they are evenly spaced on the block axis:
+              </p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6 bg-black rounded-lg">
+                  <div class="grid grid-cols-[repeat(2,56px)] place-content-evenly h-56 gap-4">
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">01</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">02</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">03</div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-sky-500">04</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Stretch</h3>
+              <p>Use place-content-stretch to stretch grid items along their grid areas on the block axis:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6 bg-black rounded-lg">
+                  <div class="grid grid-cols-2 place-content-stretch h-56 gap-4">
+                    <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-pink-500">01</div>
+                    <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-pink-500">02</div>
+                    <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-pink-500">03</div>
+                    <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-pink-500">04</div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+              <p>
+                For example, use hover:place-content-center to only apply the place-content-center utility on hover.
+              </p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5">
+                <div class="font-mono text-white text-sm font-bold leading-6 bg-black rounded-lg">
+                  <div
+                    class="grid grid-cols-[repeat(2,56px)] place-content-start hover:place-content-center h-56 gap-4"
+                  >
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-green-500">
+                      01
+                    </div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-green-500">
+                      02
+                    </div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-green-500">
+                      03
+                    </div>
+                    <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-green-500">
+                      04
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
 
             <!-- Examples -->
