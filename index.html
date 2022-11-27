@@ -70,7 +70,23 @@
                   <span class="flex-1 ml-3 whitespace-nowrap">Place Content</span>
                 </a>
               </li>
+              <li>
+                <a
+                  href="#place_items"
+                  class="flex items-center p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-gray-800"
+                >
+                  <span class="flex-1 ml-3 whitespace-nowrap">Place Items</span>
+                </a>
+              </li>
 
+              <li>
+                <a
+                  href="#place_self"
+                  class="flex items-center p-2 text-base font-normal text-white rounded-lg dark:text-white hover:bg-gray-800"
+                >
+                  <span class="flex-1 ml-3 whitespace-nowrap">Place Self</span>
+                </a>
+              </li>
               <li>
                 <a
                   href="#examples"
@@ -6973,7 +6989,6 @@
                     <th class="p-4">Properties</th>
                   </tr>
                 </thead>
-
                 <tbody>
                   <tr class="bg-white border-b">
                     <td class="p-4 text-sky-500 font-medium">place-content-center</td>
@@ -7131,7 +7146,482 @@
                 </div>
               </div>
             </section>
+            <!-- Place Items -->
+            <section class="mt-16" id="place_items">
+              <h2 class="text-2xl font-bold">Place Items</h2>
+              <p>Utilities for controlling how items are justified and aligned at the same time.</p>
+              <table class="w-full text-sm text-left table-auto bg-teal-500 mt-4">
+                <thead class="text-lg">
+                  <tr>
+                    <th class="p-4">Class</th>
+                    <th class="p-4">Properties</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-items-start</td>
+                    <td class="p-4">place-items: start;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-items-end</td>
+                    <td class="p-4">place-items: end;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-items-center</td>
+                    <td class="p-4">place-items: center;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-items-baseline</td>
+                    <td class="p-4">place-items: baseline;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-items-stretch</td>
+                    <td class="p-4">place-items: stretch;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+              <h3 class="mt-4 text-lg font-bold">Start</h3>
+              <p>Use place-items-start to place grid items on the start of their grid areas on both axes:</p>
 
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 h-56">
+                    <div class="bg-black grid place-items-start rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        01
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-start rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        02
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-start rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        03
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-start rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        04
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-start rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        05
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-start rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        06
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3 class="mt-4 text-lg font-bold">End</h3>
+              <p>Use place-items-end to place grid items on the end of their grid areas on both axes:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 h-56">
+                    <div class="bg-black grid place-items-end rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        01
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-end rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        02
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-end rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        03
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-end rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        04
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-end rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        05
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-end rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        06
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Center</h3>
+              <p>Use place-items-center to place grid items on the center of their grid areas on both axes:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 h-56">
+                    <div class="bg-black grid place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        01
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        02
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        03
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        04
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        05
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-cyan-500">
+                        06
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Stretch</h3>
+              <p>Use place-items-stretch to stretch items along their grid areas on both axes:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 h-56">
+                    <div class="bg-black grid place-items-stretch rounded-lg">
+                      <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-pink-500">01</div>
+                    </div>
+                    <div class="bg-black grid place-items-stretch rounded-lg">
+                      <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-pink-500">02</div>
+                    </div>
+                    <div class="bg-black grid place-items-stretch rounded-lg">
+                      <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-pink-500">03</div>
+                    </div>
+                    <div class="bg-black grid place-items-stretch rounded-lg">
+                      <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-pink-500">04</div>
+                    </div>
+                    <div class="bg-black grid place-items-stretch rounded-lg">
+                      <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-pink-500">05</div>
+                    </div>
+                    <div class="bg-black grid place-items-stretch rounded-lg">
+                      <div class="p-4 flex items-center justify-center shadow-lg rounded-lg bg-pink-500">06</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+              <p>For example, use hover:place-items-center to only apply the place-items-center utility on hover.</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="font-mono text-white text-sm font-bold leading-6">
+                  <div class="grid grid-cols-3 gap-4 h-56">
+                    <div class="bg-black grid place-items-end hover:place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-violet-500">
+                        01
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-end hover:place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-violet-500">
+                        02
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-end hover:place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-violet-500">
+                        03
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-end hover:place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-violet-500">
+                        04
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-end hover:place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-violet-500">
+                        05
+                      </div>
+                    </div>
+                    <div class="bg-black grid place-items-end hover:place-items-center rounded-lg">
+                      <div class="p-4 w-14 h-14 flex items-center justify-center shadow-lg rounded-lg bg-violet-500">
+                        06
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Place Self -->
+            <section class="mt-16" id="place_self">
+              <h2 class="text-2xl font-bold">Place Self</h2>
+              <p>Utilities for controlling how an individual item is justified and aligned at the same time.</p>
+              <table class="w-full text-sm text-left table-auto bg-teal-500 mt-4">
+                <thead class="text-lg">
+                  <tr>
+                    <th class="p-4">Class</th>
+                    <th class="p-4">Properties</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-self-auto</td>
+                    <td class="p-4">place-self: auto;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-self-start</td>
+                    <td class="p-4">place-self: start;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-self-end</td>
+                    <td class="p-4">place-self: end;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-self-center</td>
+                    <td class="p-4">place-self: center;</td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <td class="p-4 text-sky-500 font-medium">place-self-stretch</td>
+                    <td class="p-4">place-self: stretch;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 class="mt-6 text-blue-400 font-bold">Basic usage</h4>
+              <h3 class="mt-4 text-lg font-bold">Auto</h3>
+              <p>Use place-self-auto to align an item based on the value of the container’s place-items property:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="grid grid-cols-3 gap-4 place-iems-stretch font-mono text-white text-sm font-bold leading-6">
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400"
+                  >
+                    01
+                  </div>
+                  <div class="p-8 rounded-lg flex items-center justify-center bg-indigo-500 shadow-lg place-self-auto">
+                    02
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400"
+                  >
+                    03
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400"
+                  >
+                    04
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400"
+                  >
+                    05
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-indigo-300 dark:bg-indigo-800 dark:text-indigo-400"
+                  >
+                    06
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Start</h3>
+              <p>Use place-self-start to align an item to the start on both axes:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="grid grid-cols-3 gap-4 place-iems-stretch font-mono text-white text-sm font-bold leading-6">
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    01
+                  </div>
+                  <div class="bg-black rounded-lg grid">
+                    <div
+                      class="w-14 h-14 rounded-lg flex items-center justify-center bg-purple-500 shadow-lg place-self-start"
+                    >
+                      02
+                    </div>
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    03
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    04
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    05
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    06
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Center</h3>
+              <p>Use place-self-center to align an item at the center on both axes:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="grid grid-cols-3 gap-4 place-iems-stretch font-mono text-white text-sm font-bold leading-6">
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    01
+                  </div>
+                  <div class="bg-black rounded-lg grid">
+                    <div
+                      class="w-14 h-14 rounded-lg flex items-center justify-center bg-purple-500 shadow-lg place-self-center"
+                    >
+                      02
+                    </div>
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    03
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    04
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    05
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    06
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">End</h3>
+              <p>Use place-self-end to align an item to the end on both axes:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="grid grid-cols-3 gap-4 place-iems-stretch font-mono text-white text-sm font-bold leading-6">
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    01
+                  </div>
+                  <div class="bg-black rounded-lg grid">
+                    <div
+                      class="w-14 h-14 rounded-lg flex items-center justify-center bg-purple-500 shadow-lg place-self-end"
+                    >
+                      02
+                    </div>
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    03
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    04
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    05
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    06
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Stretch</h3>
+              <p>Use place-self-stretch to stretch an item on both axes:</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="grid grid-cols-3 gap-4 place-iems-stretch font-mono text-white text-sm font-bold leading-6">
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    01
+                  </div>
+                  <div class="bg-black rounded-lg grid">
+                    <div
+                      class="p-8 rounded-lg flex items-center justify-center bg-purple-500 shadow-lg place-self-stretch"
+                    >
+                      02
+                    </div>
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    03
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    04
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    05
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    06
+                  </div>
+                </div>
+              </div>
+              <h3 class="mt-4 text-lg font-bold">Hover, focus, and other states</h3>
+              <p>For example, use hover:place-self-end to only apply the place-self-end utility on hover.</p>
+              <div class="relative rounded-xl overflow-auto p-8 bg-slate-100 mt-5 text-white font-bold">
+                <div class="grid grid-cols-3 gap-4 place-iems-stretch font-mono text-white text-sm font-bold leading-6">
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    01
+                  </div>
+                  <div class="bg-black rounded-lg grid">
+                    <div
+                      class="p-8 rounded-lg flex items-center justify-center bg-purple-500 shadow-lg place-self-stretch hover:place-self-end"
+                    >
+                      02
+                    </div>
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    03
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    04
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    05
+                  </div>
+                  <div
+                    class="p-8 rounded-lg flex items-center justify-center bg-purple-300 dark:bg-purple-800 dark:text-purple-400"
+                  >
+                    06
+                  </div>
+                </div>
+              </div>
+            </section>
             <!-- Examples -->
             <section id="examples" class="my-16">
               <h2 class="text-[37px] font-bold">Examples</h2>

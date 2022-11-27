@@ -24,7 +24,7 @@ $ Install extention: Tailwind CSS IntelliSense
 - [x] lesson-2: Core Concepts, Base Styles
 - [x] lesson-3: Customization
 - [x] lesson-4: Layout
-- [] lesson-5: Flexbox & Grid
+- [x] lesson-5: Flexbox & Grid
 - [x] lesson-6: Spacing
 - [x] lesson-7: Sizing
 - [] lesson-8: Typography
